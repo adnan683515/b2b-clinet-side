@@ -1,0 +1,55 @@
+import React, { useEffect } from 'react';
+import { Hero } from './Hero';
+import Cetagory from '../Cetagory/Cetagory';
+
+import Marquee from "react-fast-marquee";
+import OurTeam from '../ExtraSection/OurTeam';
+import Anothersection from '../ExtraSection/Anothersection';
+
+const Home = () => {
+
+    useEffect(()=>{
+        document.getElementById('title').innerText='Home page'
+    },[])
+
+
+
+
+    return (
+        <div>
+            <Hero></Hero>
+
+            <Marquee className='my-2' direction='left" | "right"'>
+
+                <div className="text-center px-4 py-6 bg-neutral-100 rounded-md max-w-md mx-auto shadow-md">
+                    <h1 className="text-4xl font-extrabold text-cyan-950 mb-2">
+                        50% <span className="text-orange-500">Discount</span> Choltese!
+                    </h1>
+                    <p className="text-lg text-cyan-900 font-medium">
+                        Fatafati offer, miss korle hobe na! 🚀
+                    </p>
+                </div>
+
+            </Marquee>
+
+
+            <section className="bg-orange-50 py-10 px-4">
+                <div className="max-w-5xl mx-auto text-center space-y-4">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-orange-500">
+                        Category Based Products
+                    </h2>
+                    <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto">
+                        Easily explore and filter products by categories. From Electronics and Apparel to Furniture and Industrial Tools — our B2B marketplace helps you find exactly what your business needs, faster and smarter.
+                    </p>
+                </div>
+            </section>
+
+
+            <Cetagory ></Cetagory>
+            <Anothersection></Anothersection>
+            <OurTeam></OurTeam>
+        </div>
+    );
+};
+
+export default Home;

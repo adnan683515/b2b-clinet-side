@@ -1,0 +1,30 @@
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import CardFormat from './CardFormat';
+import TableFormat from './TableFormat';
+
+export const ShowProducts = ({ data }) => (
+    <Tabs>
+        <TabList>
+            <Tab>Card Format</Tab>
+            <Tab>Table Format</Tab>
+        </TabList>
+
+        <TabPanel>
+        
+
+            <div className='grid grid-cols-1 gap-2 sm:grid-cols-3 md:grid-cols-5'>
+                {
+                    data?.map((item) => <CardFormat data={item} key={item?._id} ></CardFormat>)
+                }
+            </div>
+
+        </TabPanel>
+        <TabPanel>
+            
+
+                <TableFormat data={data} ></TableFormat>
+
+        </TabPanel>
+    </Tabs>
+);

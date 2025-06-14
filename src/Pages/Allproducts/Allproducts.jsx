@@ -1,0 +1,157 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import DisplayAllComponents from './DisplayAllComponents';
+import { Link } from 'react-router';
+
+
+const Allproducts = () => {
+
+    const [data, setData] = useState([])
+    const [show, setShow] = useState(false)
+    const [format, setFormat] = useState(false)
+
+
+    useEffect(() => {
+        axios.get('https://b2b-server-side.vercel.app/filterProduct')
+            .then((res) => {
+                setData(show ? res?.data : res?.data.slice(0, 15))
+
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+
+    }, [show])
+
+    useEffect(() => {
+        document.getElementById('title').innerText = 'All Products page'
+    }, [])
+
+    const handleAvailableProducts = () => {
+
+        try {
+            //
+            const filtering = data?.filter((item) => item?.mquantity > 100)
+            setData(filtering)
+        }
+        catch {
+            //
+            console.log("handle avila funciton")
+        }
+    }
+
+    return (
+        <div>
+
+
+            <div className='flex justify-center items-center mb-3'>
+                <div className='text-center space-y-2'>
+                    <h1 className='text-orange-600 text-2xl font-bold'>Welcome to our full collection!</h1>
+                    <div className='flex justify-center items-center'>
+                        <p className='md:w-[50%] sm:w-[90%] w-[100%]'>Here you’ll find everything we offer — from bestsellers to the latest drops. Take your time, explore the variety, and discover something that fits your vibe.
+
+                            Whether you're shopping for yourself or someone else, our products are crafted with quality, style, and purpose in mind. Happy browsing!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='m-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4'>
+                {/* Select Option Section */}
+                <div className='space-y-2'>
+                    <h1 className="text-cyan-950 font-semibold">You Can Choose Any Options: </h1>
+                    <select
+                        onChange={() => setFormat(!format)}
+                        defaultValue="Card Format"
+                        className="select select-warning"
+                    >
+                        <option value={'Card Format'}>Card Format</option>
+                        <option value={'Table Format'}>Table Format</option>
+                    </select>
+                </div>
+
+                {/* Button Section */}
+                <div className='text-center'>
+                    <p className="text-orange-500 font-medium mb-2">Click to see all available products!</p>
+                    <button onClick={handleAvailableProducts} className="px-5 py-2 bg-green-500 cursor-pointer  hover:bg-orange-500 duration-1000 rounded-xl">
+                        Show Available Products
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                {
+                    format ? <div className="p-4 my-3 bg-neutral-200 text-white">
+                        <h2 className="text-2xl font-bold mb-4 text-orange-500">Product Inventory</h2>
+
+                        <div className="overflow-x-auto rounded-lg shadow-lg">
+                            <table className="min-w-full divide-y divide-cyan-700">
+                                <thead className="bg-cyan-900">
+                                    <tr>
+                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                            Image
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                            Title
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                            Cetagory
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                            Brand
+                                        </th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                                            Price
+                                        </th>
+                                        <th className="px-6 py-3  text-xs font-medium uppercase tracking-wider text-end">
+                                            Stock Status
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-black divide-y divide-cyan-800">
+                                    {data?.map((product) => (
+                                        <tr key={product._id}>
+                                            <td className="px-6 py-4 whitespace-nowrap">
+
+                                                <div className="avatar">
+                                                    <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
+                                                        <img src={product?.image} />
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{product?.title}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{product?.cetagory}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{product?.brand}</td>
+                                            <td className="px-6 py-4 whitespace-nowrap">{product?.price}   tk</td>
+                                            <td className="px-6 py-4 whitespace-nowrap flex gap-2 justify-end ">
+                                                <Link to={`/update/${product?._id}`} className=' border border-orange-400 px-5 py-1  '>update</Link>
+                                                <Link to={`/details/${product?._id}`} className='bg-orange-500 border border-white px-3 text-black py-1' >View More..</Link>
+                                            </td>
+
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> : <div>
+                        <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1  gap-2'>
+                            {
+                                data?.map((item) => <DisplayAllComponents key={item?._id} item={item}></DisplayAllComponents>)
+                            }
+                        </div>
+                        <div className='flex justify-center items-center my-2'>
+                            <button onClick={() => setShow(!show)} className='bg-orange-500 px-10 py-3 rounded-sm text-white'> {show ? 'View Less' : 'Show More'} </button>
+                        </div>
+                    </div>
+                }
+            </div>
+
+
+
+
+
+        </div>
+    );
+};
+
+export default Allproducts;
