@@ -13,7 +13,7 @@ const Navber = () => {
     const {cartItem} = useContext(CartContext)
     const navigate = useNavigate()
 
-    console.log(cartItem)
+
 
     const handleLogout = () => {
         logout()
@@ -53,7 +53,7 @@ const Navber = () => {
 
 
 
-    console.log("nav ",cartItem)
+   
 
     const links = <>
 

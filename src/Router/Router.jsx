@@ -36,7 +36,10 @@ export const router = createBrowserRouter([
                 Component: SignUp
             }, {
                 path: "/cetagory/:name",
-                loader: ({ params }) => productsPromise(params?.name),
+                loader: ({ params }) => {
+                    console.log("params",params)
+                    return productsPromise(params?.name)
+                },
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
                 </div>,

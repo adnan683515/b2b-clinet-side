@@ -154,10 +154,10 @@ const AddProduct = () => {
                                                 <option value={"Industrial Machinery & Tools"} >Industrial Machinery & Tools</option>
                                                 <option value={"Health & Beauty"} >Health & Beauty</option>
                                                 <option value={"Office Supplies & Stationery"} >Office Supplies & Stationery</option>
-                                                <option value={"Man's Clothes"} >Man's clothes </option>
+                                                <option value={"Mans Clothes"} >Man's clothes </option>
                                                 <option value={"Watches"} >Watches </option>
                                                 <option value={"Shoes"} >Shoes </option>
-                                                <option value={"Women’s Clothes"} >Women’s Clothes </option>
+                                                <option value={"Womens Clothes"} >Women’s Clothes </option>
                                             </select>
                                         </label>
                                     </div>

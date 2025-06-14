@@ -4,6 +4,8 @@ import CardFormat from './CardFormat';
 import TableFormat from './TableFormat';
 
 export const ShowProducts = ({ data }) => (
+
+    
     <Tabs>
         <TabList>
             <Tab>Card Format</Tab>

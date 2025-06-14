@@ -20,7 +20,7 @@ const Cartprovider = ({ children }) => {
                 .then((res) => res.json())
                 .then((result) => {
                     setCartItem(result?.length)
-                    console.log("cart length", result)
+                    
                 })
                 .catch((err) => {
                     console.log(err)

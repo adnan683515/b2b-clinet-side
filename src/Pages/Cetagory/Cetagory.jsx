@@ -23,16 +23,16 @@ const Cetagory = () => {
 
             <div className='grid  grid-cols-2 gap-3  sm:grid-cols-3 md:grid-cols-5 w-[98%] sm:w-[80%] mx-auto'>
 
-                <Link to={`/cetagory/Office Supplies & Stationery`}  className=" p-5  shadow-md bg-white   ">
+                <Link to={`/cetagory/Office Supplies & Stationery`} className=" p-5  shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_1}></Lottie>
                     <h1 className='text-center'>Office Supplies & Stationery</h1>
-                    
+
                 </Link>
 
-                <div className=" relative   shadow-md bg-white   ">
+                <Link to={`/cetagory/Health & Beauty`} className=" relative   shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_2}></Lottie>
                     <h1 className='absolute left-2 bottom-5'>Health & Beauty</h1>
-                </div>
+                </Link>
                 <div className=" p-5   shadow-md bg-white  ">
                     <Lottie size={20} animationData={animation_3}></Lottie>
                     <h1>Health & Beauty</h1>
@@ -41,30 +41,30 @@ const Cetagory = () => {
                     <Lottie size={20} animationData={animation_4}></Lottie>
                     <h1>Electronics & Gadgets</h1>
                 </Link>
-                <div className="  p-5 shadow-md  bg-white   ">
+                <Link to={`/cetagory/Shoes`} className="  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_5}></Lottie>
                     <h1>Shoes</h1>
-                </div>
-                <div className="  p-5 shadow-md  bg-white   ">
+                </Link>
+                <Link to={`/cetagory/Watches`} className="  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={watch}></Lottie>
                     <h1>Watches</h1>
-                </div>
-                <div className=" relative  p-5 shadow-md  bg-white   ">
+                </Link>
+                <Link to={`/cetagory/Home & Kitchen Appliances`} className=" relative  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_9}></Lottie>
                     <h1 className="absolute left-2 bottom-6">Home & Kitchen Appliances</h1>
-                </div>
-                <div className="relative  p-5 shadow-md  bg-white   ">
+                </Link>
+                <Link to={`/cetagory/Womens Clothes`} className="relative  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_10}></Lottie>
-                    <h1 className='absolute left-2 bottom-6'>Women’s Clothes</h1>
-                </div>
-                <div className=" relative  shadow-md  bg-white   ">
+                    <h1 className='absolute left-2 bottom-6'>Women's Clothes</h1>
+                </Link>
+                <Link to={`/cetagory/Mans Clothes`} className=" relative  shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_6}></Lottie>
                     <h1 className='absolute left-2 bottom-6'>Man's Clothes</h1>
-                </div>
-                <div className="   shadow-md  bg-white   ">
+                </Link>
+                <Link to={`/cetagory/Office Supplies & Stationery`} className="   shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_11}></Lottie>
-                    <h1>Health & Beauty</h1>
-                </div>
+                    <h1>Stationery</h1>
+                </Link>
 
             </div>
         </div>
