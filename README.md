@@ -1,12 +1,51 @@
-# React + Vite
+## 🔥 Project Name: B2B Wholesale Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**🌐 Live Link:** [Visit Now](https://b2b-market-place-6c30f.web.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🎯 Project Purpose
 
-## Expanding the ESLint configuration
+A modern B2B wholesale platform designed to connect bulk buyers and suppliers in one place. This app allows users to browse products by category, manage inventories, and interact with businesses efficiently.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+### 🌟 Key Features
+
+- 🛍️ Display products in both **card** and **table** formats
+- 📦 Show only available products with filter based on `Minimum_selling_quantity`
+- 📁 Category-wise product section with beautiful UI
+- 🧾 User authentication & protected routes
+- ➕ Add products with image, price, and quantity
+- 🛒 Cart system with dynamic quantity handling
+- 🚫 404 Not Found Page with custom design
+- 📱 Fully responsive layout using Tailwind CSS
+- 🎨 Custom theme using **cyan-950** and **orange-500**
+- 💬 Motivational and animated text section using Framer Motion
+
+---
+
+### 📦 NPM Packages Used
+
+- **react-router-dom** – Routing between pages  
+- **axios** – API requests  
+- **tailwindcss** – Styling framework  
+- **daisyui** – Tailwind UI component library  
+- **framer-motion** – For beautiful animation effects  
+- **react-icons** – For consistent and scalable icons  
+- **firebase** – For hosting and authentication  
+- **react-hook-form** – Form handling and validation  
+- **clsx** – For conditional class handling (optional if used)  
+- **jsonwebtoken / cookie-parser** – If used for backend auth (Node.js)
+
+---
+
+### 🚀 Bonus Suggestions (optional to add)
+
+- Add screenshots or a demo video
+- Add badges for Firebase, Tailwind, etc.
+- Write installation steps and usage guide
+
+---
+
+Let me know jodi full README.md banaite chai including install steps, backend link, contribution guideline etc. 😎
