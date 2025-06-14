@@ -33,10 +33,10 @@ const Cetagory = () => {
                     <Lottie size={20} animationData={animation_2}></Lottie>
                     <h1 className='absolute left-2 bottom-5'>Health & Beauty</h1>
                 </Link>
-                <div className=" p-5   shadow-md bg-white  ">
+                <Link to={`/cetagory/Tech Gadgets`} className=" p-5   shadow-md bg-white  ">
                     <Lottie size={20} animationData={animation_3}></Lottie>
                     <h1>Health & Beauty</h1>
-                </div>
+                </Link>
                 <Link to={'/cetagory/Electronics & Gadgets'} className=" p-5  shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_4}></Lottie>
                     <h1>Electronics & Gadgets</h1>

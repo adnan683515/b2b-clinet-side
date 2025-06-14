@@ -44,7 +44,7 @@ const MyCart = () => {
                         data?.length ? data?.map((item) => {
                             amount += item?.total
                             return <DisplayMycart data={data} setData={setData} key={item?._id} item={item}></DisplayMycart>
-                        }) : <div class="h-[40vh] flex items-center justify-center bg-cyan-950 px-4">
+                        }) : <div class="h-[40vh] flex items-center justify-center  px-4">
                             <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
                                 <h2 class="text-2xl font-bold text-cyan-950 mb-4">Your Cart is Empty 🛒</h2>
                                 <p class="text-gray-600 mb-6">Looks like you haven't added anything yet.</p>
