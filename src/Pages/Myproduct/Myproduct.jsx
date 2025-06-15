@@ -36,7 +36,7 @@ const Myproduct = () => {
         <div>
 
 
-            <div className="bg-orange-50 text-orange-500 py-10 px-4 sm:px-8 lg:px-16 rounded-xl shadow-lg w-full">
+            <div className=" text-orange-500 py-10 px-4 sm:px-8 lg:px-16 rounded-xl  w-full">
                 <div className="max-w-4xl mx-auto text-center space-y-4">
                     <h1 className="text-3xl sm:text-4xl font-bold">
                         Your <span className="text-cyan-950">Products</span> Dashboard
@@ -59,7 +59,7 @@ const Myproduct = () => {
                 data?.length ? <div className='grid grid-cols-1 my-3 sm:grid-cols-3 md:grid-cols-4 gap-2'>
                     {data?.map((item) => <DisyplayMyProduct key={item?._id} item={item}></DisyplayMyProduct>)}
                 </div> : <div className='flex justify-center items-center'>
-                    <div className="flex flex-col items-center justify-center text-center py-10 w-[90%] sm:w-[70%] md:w-[50%]  bg-orange-50 rounded-xl shadow-sm    my-6">
+                    <div className="flex flex-col items-center justify-center text-center py-10 w-[90%] sm:w-[70%] md:w-[50%]   rounded-xl    my-6">
                         <h2 className="text-2xl sm:text-3xl font-bold text-cyan-950 mb-10">
                             You haven’t added any products yet!
                         </h2>
