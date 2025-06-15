@@ -14,7 +14,7 @@ import { Link } from 'react-router';
 import { Authcontext } from '../../Context/AuthContext';
 
 
-
+import { motion } from "framer-motion";
 
 const Cetagory = () => {
 
@@ -25,7 +25,11 @@ const Cetagory = () => {
 
             <h1 className='text-3xl text-center pb-2'>Our Products Cetagory</h1>
 
-            <div className='grid  grid-cols-2 gap-3  sm:grid-cols-3 md:grid-cols-5 w-[98%] sm:w-[80%] mx-auto'>
+            <motion.div
+                initial={{ opacity: 0, translateX: '100%' }}
+                whileInView={{ opacity: 2, translateX: 0 }}
+                transition={{ duration: 2, ease: 'easeInOut' }}
+                className='grid  grid-cols-2 gap-3  sm:grid-cols-3 md:grid-cols-5 w-[98%] sm:w-[80%] mx-auto'>
 
                 <Link to={`/cetagory/Office Supplies & Stationery`} className=" p-5  shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_1}></Lottie>
@@ -70,7 +74,7 @@ const Cetagory = () => {
                     <h1>Stationery</h1>
                 </Link>
 
-            </div>
+            </motion.div>
         </div>
     );
 };

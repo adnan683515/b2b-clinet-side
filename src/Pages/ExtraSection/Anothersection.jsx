@@ -1,8 +1,12 @@
 import React from 'react';
-
+import { motion } from "framer-motion";
 const Anothersection = () => {
     return (
-        <section className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black ">
+        <motion.div
+            initial={{ opacity: 0, translateX: '-100%' }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 2 ,ease: "easeOut" }}
+            className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black ">
             <div className="text-center max-w-3xl mx-auto mb-12">
                 <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-cyan-950 uppercase rounded-full bg-orange-500">
                     For Business Owners
@@ -64,7 +68,7 @@ const Anothersection = () => {
                     </p>
                 </div>
             </div>
-        </section>
+        </motion.div>
     );
 };
 

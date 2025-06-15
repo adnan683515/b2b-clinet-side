@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { Hero } from './Hero';
 import Cetagory from '../Cetagory/Cetagory';
-
+import { motion } from "framer-motion"
 import Marquee from "react-fast-marquee";
 import OurTeam from '../ExtraSection/OurTeam';
 import Anothersection from '../ExtraSection/Anothersection';
 
 const Home = () => {
 
-    useEffect(()=>{
-        document.getElementById('title').innerText='Home page'
-    },[])
+    useEffect(() => {
+        document.getElementById('title').innerText = 'Home page'
+    }, [])
 
 
 
@@ -33,7 +33,11 @@ const Home = () => {
             </Marquee>
 
 
-            <section className="bg-orange-50 py-10 px-4">
+            <motion.div
+                initial={{ opacity: 0, translateX: '-100%' }}
+                whileInView={{ opacity: 2, translateX: 0 }}
+                transition={{ duration: 2, ease: 'easeInOut' }}
+                className="bg-orange-50 py-10 px-4">
                 <div className="max-w-5xl mx-auto text-center space-y-4">
                     <h2 className="text-3xl sm:text-4xl font-bold text-orange-500">
                         Category Based Products
@@ -42,10 +46,13 @@ const Home = () => {
                         Easily explore and filter products by categories. From Electronics and Apparel to Furniture and Industrial Tools — our B2B marketplace helps you find exactly what your business needs, faster and smarter.
                     </p>
                 </div>
-            </section>
+            </motion.div>
 
 
             <Cetagory ></Cetagory>
+
+
+
             <Anothersection></Anothersection>
             <OurTeam></OurTeam>
         </div>
