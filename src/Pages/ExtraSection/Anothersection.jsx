@@ -2,73 +2,66 @@ import React from 'react';
 import { motion } from "framer-motion";
 const Anothersection = () => {
     return (
-        <motion.div
-            initial={{ opacity: 0, translateX: '-100%' }}
-            whileInView={{ opacity: 1, translateX: 0 }}
-            transition={{ duration: 2 ,ease: "easeOut" }}
-            className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black ">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-                <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-cyan-950 uppercase rounded-full bg-orange-500">
-                    For Business Owners
-                </p>
-                <h2 className="text-3xl font-bold  sm:text-4xl">
-                    Powering B2B Wholesale With Speed & Trust
-                </h2>
-                <p className="mt-4 text-base   md:text-lg">
-                    Connect with verified suppliers, place bulk orders, and streamline your wholesale operations all in one platform.
-                </p>
-            </div>
-
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-2">
-                {/* Feature 1 */}
-                <div>
-                    <h6 className="mb-2 text-xl font-semibold text-orange-500">✅ Verified Suppliers Only</h6>
-                    <p className="text-sm  ">
-                        We partner with trusted businesses only — no scams, no low-quality products.
+        <div>
+            <div
+                // initial={{ opacity: 0, x: -100 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // transition={{ duration: 2, ease: "easeOut" }}
+                // className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black"
+            >
+                {/* Header section */}
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-cyan-950 uppercase rounded-full bg-orange-500">
+                        For Business Owners
+                    </p>
+                    <h2 className="text-3xl font-bold sm:text-4xl text-orange-500">
+                        Powering B2B Wholesale With Speed & Trust
+                    </h2>
+                    <p className="mt-4 text-base sm:text-lg text-cyan-900">
+                        Connect with verified suppliers, place bulk orders, and streamline your wholesale operations all in one platform.
                     </p>
                 </div>
 
-                {/* Feature 2 */}
-                <div>
-                    <h6 className="mb-2 text-xl font-semibold text-orange-500">📦 Bulk Orders, Better Deals</h6>
-                    <p className="text-sm  ">
-                        Enjoy wholesale pricing that saves you more as your order size grows.
-                    </p>
-                </div>
-
-                {/* Feature 3 */}
-                <div>
-                    <h6 className="mb-2 text-xl font-semibold text-orange-500">🚚 Fast Logistics Support</h6>
-                    <p className="text-sm  ">
-                        Get your products delivered quickly with real-time tracking and smooth coordination.
-                    </p>
-                </div>
-
-                {/* Feature 4 */}
-                <div>
-                    <h6 className="mb-2 text-xl font-semibold text-orange-500">🔍 Easy Product Discovery</h6>
-                    <p className="text-sm  ">
-                        Advanced filters and search to help you find the right products faster.
-                    </p>
-                </div>
-
-                {/* Feature 5 */}
-                <div>
-                    <h6 className="mb-2 text-xl font-semibold text-orange-500">💳 Secure B2B Payments</h6>
-                    <p className="text-sm  ">
-                        Flexible payments with full escrow protection — peace of mind for buyers and sellers.
-                    </p>
-                </div>
-
-                {/* Feature 6 */}
-                <div>
-                    <h6 className="mb-2 text-xl font-semibold text-orange-500">🤝 Dedicated Support Team</h6>
-                    <p className="text-sm  ">
-                        Always here to help — from product inquiries to order disputes.
-                    </p>
+                {/* Features grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    {[
+                        {
+                            title: "✅ Verified Suppliers Only",
+                            desc: "We partner with trusted businesses only — no scams, no low-quality products.",
+                        },
+                        {
+                            title: "📦 Bulk Orders, Better Deals",
+                            desc: "Enjoy wholesale pricing that saves you more as your order size grows.",
+                        },
+                        {
+                            title: "🚚 Fast Logistics Support",
+                            desc: "Get your products delivered quickly with real-time tracking and smooth coordination.",
+                        },
+                        {
+                            title: "🔍 Easy Product Discovery",
+                            desc: "Advanced filters and search to help you find the right products faster.",
+                        },
+                        {
+                            title: "💳 Secure B2B Payments",
+                            desc: "Flexible payments with full escrow protection — peace of mind for buyers and sellers.",
+                        },
+                        {
+                            title: "🤝 Dedicated Support Team",
+                            desc: "Always here to help — from product inquiries to order disputes.",
+                        },
+                    ].map((feature, index) => (
+                        <div
+                            key={index}
+                            className="bg-white p-4 shadow-sm rounded-lg hover:shadow-md transition-all duration-300"
+                        >
+                            <h6 className="mb-2 text-lg font-semibold text-orange-500">{feature.title}</h6>
+                            <p className="text-sm text-cyan-950">{feature.desc}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </motion.div>
+
+        </div>
     );
 };
 

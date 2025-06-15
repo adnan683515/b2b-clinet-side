@@ -34,15 +34,16 @@ const Home = () => {
 
 
             <motion.div
-                initial={{ opacity: 0, translateX: '-100%' }}
-                whileInView={{ opacity: 2, translateX: 0 }}
+                initial={{ opacity: 0, x: -100 }} // translateX → x
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 2, ease: 'easeInOut' }}
-                className="bg-orange-50 py-10 px-4">
-                <div className="max-w-5xl mx-auto text-center space-y-4">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-orange-500">
+                className="bg-orange-50 py-10 px-4 sm:px-6 md:px-10 lg:px-16"
+            >
+                <div className="max-w-5xl mx-auto text-center space-y-6">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500">
                         Category Based Products
                     </h2>
-                    <p className="text-gray-700 text-base sm:text-lg max-w-3xl mx-auto">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
                         Easily explore and filter products by categories. From Electronics and Apparel to Furniture and Industrial Tools — our B2B marketplace helps you find exactly what your business needs, faster and smarter.
                     </p>
                 </div>
