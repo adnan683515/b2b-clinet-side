@@ -7,6 +7,8 @@ import ShowAllCetagoryy from './ShowAllCetagory';
 
 
 const ShowAllCetagory = () => {
+
+    
     return (
         <div>
             <div className="text-center space-y-2 px-4 py-6">

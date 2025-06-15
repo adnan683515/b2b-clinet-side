@@ -35,7 +35,7 @@ const Cetagory = () => {
 
                 <Link to={`/cetagory/Health & Beauty`} className=" relative   shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_2}></Lottie>
-                    <h1 className='absolute left-2bottom-5'>Health & Beauty</h1>
+                    <h1 className='absolute left-2 bottom-5'>Health & Beauty</h1>
                 </Link>
                 <Link to={`/cetagory/Tech Gadgets`} className=" p-5   shadow-md bg-white  ">
                     <Lottie size={20} animationData={animation_3}></Lottie>
