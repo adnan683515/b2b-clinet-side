@@ -11,14 +11,7 @@ const Allproducts = () => {
     const [show, setShow] = useState(false)
     const [format, setFormat] = useState(false)
     const {user} = useContext(Authcontext)
-    console.log(user)
 
-    // accessToken
-    // ?email=${user?.email}`,{
-    //         headers : {
-    //             Authorization : `Bearar ${user?.accessToken}`
-    //         }
-    //     }
     useEffect(() => {
         axios.get(`https://b2b-server-side.vercel.app/filterProduct?email=${user?.email}`,{
             headers : {
@@ -27,13 +20,17 @@ const Allproducts = () => {
         })
             .then((res) => {
                 setData(show ? res?.data : res?.data.slice(0, 15))
+                // setData(res?.data)
 
             })
             .catch((err) => {
                 console.log(err)
             })
 
-    }, [show])
+    }, [show,user?.accessToken,user?.email])
+
+    console.log("data",data)
+    console.log("length",data?.length)
 
     useEffect(() => {
         document.getElementById('title').innerText = 'All Products page'
