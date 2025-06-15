@@ -29,8 +29,7 @@ const Allproducts = () => {
 
     }, [show,user?.accessToken,user?.email])
 
-    console.log("data",data)
-    console.log("length",data?.length)
+
 
     useEffect(() => {
         document.getElementById('title').innerText = 'All Products page'

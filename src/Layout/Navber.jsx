@@ -37,23 +37,7 @@ const Navber = () => {
     }
 
 
-    // useEffect(() => {
-    //     axios.get(`https://b2b-server-side.vercel.app/mycart/${user?.email}`, {
-    //         headers: {
-    //             Authorization: `Bearar ${user?.accessToken}`
-    //         }
-    //     })
-    //         .then((res) => {
-    //             console.log(res?.data,'cartasdfadsfasdf')
-    //         })
-    //         .catch((err) => {
-    //             console.log(err)
-    //         })
-    // }, [user?.accessToken, user?.email])
-
-
-
-   
+ 
 
     const links = <>
 

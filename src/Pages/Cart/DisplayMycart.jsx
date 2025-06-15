@@ -34,8 +34,8 @@ const DisplayMycart = ({ item, data, setData }) => {
                                 icon: "success"
                             });
                             axios.patch(`https://b2b-server-side.vercel.app/item/${item?.productId}`, { Qnt: item?.count })
-                                .then((res) => {
-                                    console.log(res)
+                                .then(() => {
+                                    // console.log(res)
                                 })
                                 .catch((err) => {
                                     console.log(err)
