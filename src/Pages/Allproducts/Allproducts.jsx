@@ -1,7 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import DisplayAllComponents from './DisplayAllComponents';
 import { Link } from 'react-router';
+import { Authcontext } from '../../Context/AuthContext';
 
 
 const Allproducts = () => {
@@ -9,10 +10,21 @@ const Allproducts = () => {
     const [data, setData] = useState([])
     const [show, setShow] = useState(false)
     const [format, setFormat] = useState(false)
+    const {user} = useContext(Authcontext)
+    console.log(user)
 
-
+    // accessToken
+    // ?email=${user?.email}`,{
+    //         headers : {
+    //             Authorization : `Bearar ${user?.accessToken}`
+    //         }
+    //     }
     useEffect(() => {
-        axios.get('https://b2b-server-side.vercel.app/filterProduct')
+        axios.get(`https://b2b-server-side.vercel.app/filterProduct?email=${user?.email}`,{
+            headers : {
+                Authorization : `Bearar ${user?.accessToken}`
+            }
+        })
             .then((res) => {
                 setData(show ? res?.data : res?.data.slice(0, 15))
 
