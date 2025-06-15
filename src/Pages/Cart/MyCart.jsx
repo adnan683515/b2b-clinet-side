@@ -8,6 +8,7 @@ const MyCart = () => {
 
     const [data, setData] = useState([])
     const { user } = useContext(Authcontext)
+    const [load, setLoad] = useState(true)
 
     const token = user?.accessToken
     useEffect(() => {
@@ -19,6 +20,7 @@ const MyCart = () => {
             .then((res) => res.json())
             .then((result) => {
                 setData(result)
+                setLoad(false)
 
             })
             .catch((err) => {
@@ -41,7 +43,9 @@ const MyCart = () => {
                 <ul className="flex flex-col divide-y  ">
 
                     {
-                        data?.length ? data?.map((item) => {
+                        load ? <div className='flex justify-center items-center my-20'>
+                            <span className="loading loading-spinner text-cyan-950"></span>
+                        </div> : data?.length ? data?.map((item) => {
                             amount += item?.total
                             return <DisplayMycart data={data} setData={setData} key={item?._id} item={item}></DisplayMycart>
                         }) : <div class="h-[40vh] flex items-center justify-center  px-4">

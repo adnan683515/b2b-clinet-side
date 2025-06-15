@@ -7,6 +7,7 @@ const Myproduct = () => {
 
     const [data, setData] = useState([])
     const { user } = useContext(Authcontext)
+    const [load, setLoad] = useState(true)
 
 
     const params = useParams()
@@ -24,7 +25,10 @@ const Myproduct = () => {
             }
         })
             .then((res) => res.json())
-            .then((result) => setData(result))
+            .then((result) => {
+                setData(result)
+                setLoad(false)
+            })
             .catch((error) => {
                 console.log(error)
             })
@@ -56,7 +60,9 @@ const Myproduct = () => {
 
 
             {
-                data?.length ? <div className='grid grid-cols-1 my-3 sm:grid-cols-3 md:grid-cols-4 gap-2'>
+                load ? <div className='flex justify-center items-center my-20'>
+                    <span className="loading loading-spinner text-cyan-950"></span>
+                </div> : data?.length ? <div className='grid grid-cols-1 my-3 sm:grid-cols-3 md:grid-cols-4 gap-2'>
                     {data?.map((item) => <DisyplayMyProduct key={item?._id} item={item}></DisyplayMyProduct>)}
                 </div> : <div className='flex justify-center items-center'>
                     <div className="flex flex-col items-center justify-center text-center py-10 w-[90%] sm:w-[70%] md:w-[50%]   rounded-xl    my-6">
