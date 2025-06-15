@@ -1,11 +1,32 @@
-import React from 'react';
-import { useLoaderData } from 'react-router';
+import React, { useContext, useEffect, useState } from 'react';
+import {  useParams } from 'react-router';
 import { ShowProducts } from '../Cetagory/ShowProducts';
+import axios from 'axios';
+import { Authcontext } from '../../Context/AuthContext';
 
 const Cetagory = () => {
 
-    const data = useLoaderData()
-    console.log("data", data)
+    const [data,setData] = useState([])
+    const params = useParams()
+    const {user} = useContext(Authcontext)
+    
+    console.log(user,params)
+
+    useEffect(() => {
+        axios.get(`https://b2b-server-side.vercel.app/filterProduct?cetagory=${params?.name}&email=${user?.email}`,{
+            headers : {
+                Authorization: `Bearar ${user?.accessToken}`
+            }
+        })
+        .then((res)=>{
+            setData(res?.data)
+        })
+        .catch((err)=>{
+            console.log("errror",err)
+        })
+
+    }, [])
+
 
 
     return (

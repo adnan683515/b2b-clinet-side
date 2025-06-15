@@ -27,45 +27,45 @@ const Cetagory = () => {
 
             <div className='grid  grid-cols-2 gap-3  sm:grid-cols-3 md:grid-cols-5 w-[98%] sm:w-[80%] mx-auto'>
 
-                <Link to={`/cetagory/Office Supplies & Stationery/${user?.email}/${user?.accessToken}`} className=" p-5  shadow-md bg-white   ">
+                <Link to={`/cetagory/Office Supplies & Stationery`} className=" p-5  shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_1}></Lottie>
                     <h1 className='text-center'>Office Supplies & Stationery</h1>
 
                 </Link>
 
-                <Link to={`/cetagory/Health & Beauty/${user?.email}/${user?.accessToken}`} className=" relative   shadow-md bg-white   ">
+                <Link to={`/cetagory/Health & Beaut`} className=" relative   shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_2}></Lottie>
-                    <h1 className='absolute left-2 bottom-5'>Health & Beauty</h1>
+                    <h1 className='absolute left-2bottom-5'>Health & Beauty</h1>
                 </Link>
-                <Link to={`/cetagory/Tech Gadgets/${user?.email}/${user?.accessToken}`} className=" p-5   shadow-md bg-white  ">
+                <Link to={`/cetagory/Tech Gadgets`} className=" p-5   shadow-md bg-white  ">
                     <Lottie size={20} animationData={animation_3}></Lottie>
                     <h1>Health & Beauty</h1>
                 </Link>
-                <Link to={'/cetagory/Electronics & Gadgets/${user?.email}/${user?.accessToken}'} className=" p-5  shadow-md bg-white   ">
+                <Link to={'/cetagory/Electronics & Gadgets'} className=" p-5  shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_4}></Lottie>
                     <h1>Electronics & Gadgets</h1>
                 </Link>
-                <Link to={`/cetagory/Shoes/${user?.email}/${user?.accessToken}`} className="  p-5 shadow-md  bg-white   ">
+                <Link to={`/cetagory/Shoes`} className="  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_5}></Lottie>
                     <h1>Shoes</h1>
                 </Link>
-                <Link to={`/cetagory/Watches/${user?.email}/${user?.accessToken}`} className="  p-5 shadow-md  bg-white   ">
+                <Link to={`/cetagory/Watches`} className="  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={watch}></Lottie>
                     <h1>Watches</h1>
                 </Link>
-                <Link to={`/cetagory/Home & Kitchen Appliances/${user?.email}/${user?.accessToken}`} className=" relative  p-5 shadow-md  bg-white   ">
+                <Link to={`/cetagory/Home & Kitchen Appliances`} className=" relative  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_9}></Lottie>
                     <h1 className="absolute left-2 bottom-6">Home & Kitchen Appliances</h1>
                 </Link>
-                <Link to={`/cetagory/Womens Clothes/${user?.email}/${user?.accessToken}`} className="relative  p-5 shadow-md  bg-white   ">
+                <Link to={`/cetagory/Womens Clothes`} className="relative  p-5 shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_10}></Lottie>
                     <h1 className='absolute left-2 bottom-6'>Women's Clothes</h1>
                 </Link>
-                <Link to={`/cetagory/Mans Clothes/${user?.email}/${user?.accessToken}`} className=" relative  shadow-md  bg-white   ">
+                <Link to={`/cetagory/Mans Clothes`} className=" relative  shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_6}></Lottie>
                     <h1 className='absolute left-2 bottom-6'>Man's Clothes</h1>
                 </Link>
-                <Link to={`/cetagory/Office Supplies & Stationery/${user?.email}/${user?.accessToken}`} className="   shadow-md  bg-white   ">
+                <Link to={`/cetagory/Office Supplies & Stationery`} className="   shadow-md  bg-white   ">
                     <Lottie size={20} animationData={animation_11}></Lottie>
                     <h1>Stationery</h1>
                 </Link>
