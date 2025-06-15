@@ -18,7 +18,7 @@ import { Authcontext } from '../../Context/AuthContext';
 
 const Cetagory = () => {
 
-    const {user} = useContext(Authcontext)
+
 
     return (
         <div className='bg-orange-50 mb-10 py-10'>
@@ -33,7 +33,7 @@ const Cetagory = () => {
 
                 </Link>
 
-                <Link to={`/cetagory/Health & Beaut`} className=" relative   shadow-md bg-white   ">
+                <Link to={`/cetagory/Health & Beauty`} className=" relative   shadow-md bg-white   ">
                     <Lottie size={20} animationData={animation_2}></Lottie>
                     <h1 className='absolute left-2bottom-5'>Health & Beauty</h1>
                 </Link>
