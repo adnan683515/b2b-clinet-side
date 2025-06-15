@@ -8,12 +8,13 @@ import Allproducts from "../Pages/Allproducts/Allproducts";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import Myproduct from "../Pages/Myproduct/Myproduct";
 import PrivetRouter from "./PrivetRouter";
-import { productsPromise } from "../Utility/filterProductapi";
+
 import ProductDetails from "../Pages/Details/ProductDetails";
 import MyCart from "../Pages/Cart/MyCart";
 import Update from "../Pages/Update/Update";
 import { toast } from 'react-toastify';
-import AllCetagory from "../Pages/Cetagory/AllCetagory";
+import ShowAllCetagory from "../Pages/Cetagory/ShowAllCetagory";
+
 
 
 
@@ -36,10 +37,7 @@ export const router = createBrowserRouter([
                 Component: SignUp
             }, {
                 path: "/cetagory/:name",
-                // loader: ({ params }) => {
-                //     console.log(params)
-                //     return productsPromise(params?.name, params?.email, params?.token)
-                // },
+                
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
                 </div>,
@@ -102,7 +100,7 @@ export const router = createBrowserRouter([
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
                 </div>,
-                Component: AllCetagory
+                Component: ShowAllCetagory
 
             }
 

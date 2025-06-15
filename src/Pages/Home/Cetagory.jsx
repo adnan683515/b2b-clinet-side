@@ -10,11 +10,11 @@ const Cetagory = () => {
     const params = useParams()
     const {user} = useContext(Authcontext)
     
-    // console.log(user,params?.name)
+
     const ceta = encodeURIComponent(params?.name)
 
     useEffect(() => {
-        axios.get(`http://localhost:4000/filterProduct?cetagory=${ceta}&email=${user?.email}`,{
+        axios.get(`https://b2b-server-side.vercel.app/filterProduct?cetagory=${ceta}&email=${user?.email}`,{
             headers : {
                 Authorization: `Bearar ${user?.accessToken}`
             }

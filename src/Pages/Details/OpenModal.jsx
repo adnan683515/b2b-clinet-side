@@ -59,8 +59,7 @@ const OpenModal = ({ item }) => {
                 }
                 axios.patch(`https://b2b-server-side.vercel.app/item/${item?._id}`, { Qnt: count })
                     .then(() => {
-                        // console.log(res)
-                        //
+                        
                     })
                     .catch((err) => {
                         console.log(err)

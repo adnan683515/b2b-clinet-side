@@ -1,9 +1,12 @@
 import React from 'react';
 import Cetagory from './Cetagory';
 import { motion } from "framer-motion";
+import ShowAllCetagoryy from './ShowAllCetagory';
 
 
-const AllCetagory = () => {
+
+
+const ShowAllCetagory = () => {
     return (
         <div>
             <div className="text-center space-y-2 px-4 py-6">
@@ -33,4 +36,4 @@ const AllCetagory = () => {
     );
 };
 
-export default AllCetagory;
+export default ShowAllCetagory;

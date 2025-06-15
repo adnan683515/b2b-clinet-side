@@ -22,8 +22,8 @@ const Cartprovider = ({ children }) => {
                     setCartItem(result?.length)
                     
                 })
-                .catch((err) => {
-                    console.log(err)
+                .catch(() => {
+                    
                 })
         }
     }, [user,cartItem])
