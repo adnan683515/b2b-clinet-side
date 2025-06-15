@@ -43,7 +43,9 @@ export const router = createBrowserRouter([
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
                 </div>,
-                Component: Cetagory
+                element : <PrivetRouter>
+                    <Cetagory></Cetagory>
+                </PrivetRouter>
             }, {
                 path: "/all-products",
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
