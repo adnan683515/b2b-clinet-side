@@ -19,7 +19,7 @@ const Myproduct = () => {
 
     useEffect(() => {
         const token = user?.accessToken
-        fetch(`https://b2b-server-side.vercel.app/filterProduct?email=${params?.email}`, {
+        fetch(`https://b2b-server-side.vercel.app/myproduct?email=${params?.email}`, {
             headers: {
                 Authorization: `Bearar ${token}`
             }
