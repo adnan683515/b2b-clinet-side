@@ -10,24 +10,26 @@ const Allproducts = () => {
     const [data, setData] = useState([])
     const [show, setShow] = useState(false)
     const [format, setFormat] = useState(false)
-    const {user} = useContext(Authcontext)
+    const { user } = useContext(Authcontext)
+    const [load, setLoad] = useState(true)
 
     useEffect(() => {
-        axios.get(`https://b2b-server-side.vercel.app/filterProduct?email=${user?.email}`,{
-            headers : {
-                Authorization : `Bearar ${user?.accessToken}`
+        axios.get(`https://b2b-server-side.vercel.app/filterProduct?email=${user?.email}`, {
+            headers: {
+                Authorization: `Bearar ${user?.accessToken}`
             }
         })
             .then((res) => {
                 setData(show ? res?.data : res?.data.slice(0, 15))
                 // setData(res?.data)
+                setLoad(false)
 
             })
             .catch((err) => {
                 console.log(err)
             })
 
-    }, [show,user?.accessToken,user?.email])
+    }, [show, user?.accessToken, user?.email])
 
 
 
@@ -89,7 +91,9 @@ const Allproducts = () => {
 
             <div>
                 {
-                    format ? <div className="p-4 my-3 bg-neutral-200 text-white">
+                    load ? <div className='flex justify-center items-center my-20'>
+                        <span className="loading loading-spinner text-cyan-950"></span>
+                    </div> : format ? <div className="p-4 my-3 bg-neutral-200 text-white">
                         <h2 className="text-2xl font-bold mb-4 text-orange-500">Product Inventory</h2>
 
                         <div className="overflow-x-auto rounded-lg shadow-lg">
