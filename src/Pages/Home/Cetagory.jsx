@@ -1,34 +1,36 @@
 import React, { useContext, useEffect, useState } from 'react';
-import {  useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { ShowProducts } from '../Cetagory/ShowProducts';
 import axios from 'axios';
 import { Authcontext } from '../../Context/AuthContext';
 
 const Cetagory = () => {
 
-    const [data,setData] = useState([])
+    const [data, setData] = useState([])
+    const [load, setLoad] = useState(true)
     const params = useParams()
-    const {user} = useContext(Authcontext)
-    
+    const { user } = useContext(Authcontext)
+
 
     const ceta = encodeURIComponent(params?.name)
 
     useEffect(() => {
-        axios.get(`https://b2b-server-side.vercel.app/filterProduct?cetagory=${ceta}&email=${user?.email}`,{
-            headers : {
+        axios.get(`https://b2b-server-side.vercel.app/filterProduct?cetagory=${ceta}&email=${user?.email}`, {
+            headers: {
                 Authorization: `Bearar ${user?.accessToken}`
             }
         })
-        .then((res)=>{
-            setData(res?.data)
-        })
-        .catch((err)=>{
-            console.log("errror",err)
-        })
+            .then((res) => {
+                setData(res?.data)
+                setLoad(false)
+            })
+            .catch((err) => {
+                console.log("errror", err)
+            })
 
     }, [])
 
-
+    console.log("data", data)
 
     return (
         <div className=''>
@@ -39,7 +41,9 @@ const Cetagory = () => {
                 </div>
             </div>
             <div>
-                {data?.length ? <ShowProducts data={data} ></ShowProducts> : <div className="flex flex-col items-center justify-center text-center px-4 py-10 space-y-4">
+                {load ? <div className='flex justify-center items-center my-20'>
+                    <span className="loading loading-spinner text-cyan-950"></span>
+                </div> : data?.length ? <ShowProducts data={data} ></ShowProducts> : <div className="flex flex-col items-center justify-center text-center px-4 py-10 space-y-4">
                     {/* Crying Image */}
                     <img
                         src="https://cdn-icons-png.flaticon.com/512/742/742752.png"
@@ -59,7 +63,7 @@ const Cetagory = () => {
                 </div>}
             </div>
 
-
+        
 
         </div>
     );
