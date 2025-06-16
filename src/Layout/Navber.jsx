@@ -1,4 +1,4 @@
-import React, { useContext,  } from 'react';
+import React, { useContext, } from 'react';
 import logo from '../assets/logo.png'
 import { Link, NavLink, useNavigate } from 'react-router';
 import { Authcontext } from './../Context/AuthContext';
@@ -9,8 +9,8 @@ import { CartContext } from '../Context/Cartprovider';
 // import axios from 'axios';
 const Navber = () => {
 
-    const { user,logout, loading } = useContext(Authcontext)
-    const {cartItem} = useContext(CartContext)
+    const { user, logout, loading } = useContext(Authcontext)
+    const { cartItem } = useContext(CartContext)
     const navigate = useNavigate()
 
 
@@ -37,7 +37,7 @@ const Navber = () => {
     }
 
 
- 
+
 
     const links = <>
 
@@ -109,13 +109,17 @@ const Navber = () => {
                         </button>
                     </div>
                 ) : (
-                    <div className="flex gap-2">
-                        <Link to={'/login'} className="bg-orange-500 px-4 py-1.5 rounded-md text-white hover:bg-orange-600 transition">
-                            Login
-                        </Link>
-                        <Link to={'/signup'} className="bg-white text-cyan-950 px-4 py-1.5 rounded-md hover:bg-gray-200 transition">
-                            Sign Up
-                        </Link>
+                    <div className="flex gap-1 sm:gap-2 ">
+                        <div>
+                            <Link to={'/login'} className="bg-orange-500 px-4 rounded-md py-2 text-white text-center hover:bg-orange-600 transition">
+                                Login
+                            </Link>
+                        </div>
+                        <div className=''>
+                            <Link to={'/signup'} className="bg-white text-cyan-950 px-4 py-2 text-center  rounded-md hover:bg-gray-200 transition">
+                                Sign Up
+                            </Link>
+                        </div>
                     </div>
                 )}
             </div>
