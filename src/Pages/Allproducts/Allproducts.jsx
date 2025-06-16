@@ -20,7 +20,7 @@ const Allproducts = () => {
             }
         })
             .then((res) => {
-                setData(show ? res?.data : res?.data.slice(0, 15))
+                setData(show ? res?.data : res?.data.slice(0, 20))
                 // setData(res?.data)
                 setLoad(false)
 
