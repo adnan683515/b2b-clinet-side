@@ -39,8 +39,8 @@ const Cetagory = () => {
                     { name: 'Shoes', animation: animation_5 },
                     { name: 'Watches', animation: watch },
                     { name: 'Home & Kitchen Appliances', animation: animation_9 },
-                    { name: "Women's Clothes", animation: animation_10 },
-                    { name: "Man's Clothes", animation: animation_6 },
+                    { name: "Womens Clothes", animation: animation_10 },
+                    { name: "Mans Clothes", animation: animation_6 },
                     { name: 'Stationery', animation: animation_11 },
                 ].map((item, index) => (
                     <Link
