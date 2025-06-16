@@ -89,74 +89,84 @@ const Allproducts = () => {
                 </div>
             </div>
 
+
+
             <div>
                 {
-                    load ? <div className='flex justify-center items-center my-20'>
-                        <span className="loading loading-spinner text-cyan-950"></span>
-                    </div> : format ? <div className="p-4 my-3 bg-neutral-200 text-white">
-                        <h2 className="text-2xl font-bold mb-4 text-orange-500">Product Inventory</h2>
+                    load ? (
+                        <div className='flex justify-center items-center my-20'>
+                            <span className="loading loading-spinner text-cyan-950"></span>
+                        </div>
+                    ) : format ? (
+                        <div className="p-4 my-3 bg-neutral-200 rounded-xl shadow-sm">
+                            <h2 className="text-2xl font-bold mb-4 text-orange-500 text-center">Product Inventory</h2>
 
-                        <div className="overflow-x-auto rounded-lg shadow-lg">
-                            <table className="min-w-full divide-y divide-cyan-700">
-                                <thead className="bg-cyan-900">
-                                    <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                            Image
-                                        </th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                            Title
-                                        </th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                            Cetagory
-                                        </th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                            Brand
-                                        </th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                            Price
-                                        </th>
-                                        <th className="px-6 py-3  text-xs font-medium uppercase tracking-wider text-end">
-                                            Stock Status
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className="text-black divide-y divide-cyan-800">
-                                    {data?.map((product) => (
-                                        <tr key={product._id}>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-
-                                                <div className="avatar">
-                                                    <div className="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
-                                                        <img src={product?.image} />
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">{product?.title}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap">{product?.cetagory}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap">{product?.brand}</td>
-                                            <td className="px-6 py-4 whitespace-nowrap">{product?.price}   tk</td>
-                                            <td className="px-6 py-4 whitespace-nowrap flex gap-2 justify-end ">
-                                                <Link to={`/update/${product?._id}`} className=' border border-orange-400 px-5 py-1  '>update</Link>
-                                                <Link to={`/details/${product?._id}`} className='bg-orange-500 border border-white px-3 text-black py-1' >View More..</Link>
-                                            </td>
-
+                            <div className="overflow-x-auto rounded-lg border border-cyan-200 shadow-lg">
+                                <table className="min-w-full divide-y divide-cyan-700 text-sm text-gray-800">
+                                    <thead className="bg-cyan-950 text-white">
+                                        <tr>
+                                            <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Image</th>
+                                            <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Title</th>
+                                            <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Category</th>
+                                            <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Brand</th>
+                                            <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Price</th>
+                                            <th className="px-6 py-3 text-right text-xs font-semibold uppercase tracking-wide">Stock Status</th>
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+
+                                    <tbody className="divide-y divide-cyan-100 bg-white">
+                                        {data?.map((product) => (
+                                            <tr key={product._id} className="hover:bg-cyan-50 transition duration-300">
+                                                <td className="px-6 py-4 whitespace-nowrap">
+                                                    <div className="avatar">
+                                                        <div className="w-10 rounded-full ring-2 ring-offset-2 ring-cyan-500">
+                                                            <img src={product?.image} />
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td className="px-6 py-4 whitespace-nowrap font-medium">{product?.title}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">{product?.cetagory}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">{product?.brand}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-orange-500 font-semibold">{product?.price} Tk</td>
+                                                <td className="px-6 py-4 whitespace-nowrap flex gap-2 justify-end">
+                                                    <Link
+                                                        to={`/update/${product?._id}`}
+                                                        className="px-4 py-1 border border-orange-300 rounded-md text-orange-600 hover:bg-orange-50 transition duration-300"
+                                                    >
+                                                        Update
+                                                    </Link>
+                                                    <Link
+                                                        to={`/details/${product?._id}`}
+                                                        className="px-4 py-1 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition duration-300"
+                                                    >
+                                                        View More..
+                                                    </Link>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div> : <div>
-                        <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1  gap-2'>
-                            {
-                                data?.map((item) => <DisplayAllComponents key={item?._id} item={item}></DisplayAllComponents>)
-                            }
+                    ) : (
+                        <div>
+                            <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2'>
+                                {
+                                    data?.map((item) => (
+                                        <DisplayAllComponents key={item?._id} item={item} />
+                                    ))
+                                }
+                            </div>
+                            <div className='flex justify-center items-center my-2'>
+                                <button onClick={() => setShow(!show)} className='bg-orange-500 px-10 py-3 rounded-sm text-white'>
+                                    {show ? 'View Less' : 'Show More'}
+                                </button>
+                            </div>
                         </div>
-                        <div className='flex justify-center items-center my-2'>
-                            <button onClick={() => setShow(!show)} className='bg-orange-500 px-10 py-3 rounded-sm text-white'> {show ? 'View Less' : 'Show More'} </button>
-                        </div>
-                    </div>
+                    )
                 }
             </div>
+
 
 
 

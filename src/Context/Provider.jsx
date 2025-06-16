@@ -46,12 +46,6 @@ const Provider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
 
-
-
-
-   
-
-
     const info = {
         register,
         user,
