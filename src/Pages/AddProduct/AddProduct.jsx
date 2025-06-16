@@ -32,6 +32,17 @@ const AddProduct = () => {
             });
             return
         }
+        if (parseInt(productInfo?.miniquantity) < 1) {
+            Swal.fire({
+                icon: "error",
+                title: "Minimum quantity must be Greater then O ",
+                text: "Something went wrong!",
+                footer: '<a href="#">Why do I have this issue?</a>'
+            });
+            return
+        }
+
+
         axios.post('https://b2b-server-side.vercel.app/addproduct', productInfo)
             .then((response) => {
 

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Authcontext } from '../../Context/AuthContext';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { Bounce, Slide, toast } from 'react-toastify';
 import axios from 'axios';
 import Swal from 'sweetalert2';
@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 const OpenModal = ({ item }) => {
     const { user } = useContext(Authcontext);
     const [count, setCount] = useState(1);
+    const navi = useNavigate()
 
 
     const clickPositiveIcon = () => {
@@ -22,7 +23,7 @@ const OpenModal = ({ item }) => {
 
     const tk = count * (item?.price || 0);
 
-    const handleBuy = () => {
+    const handleBuy =  () => {
         if (count < item?.miniquantity) {
             toast.error(`You will be buy products at least ${item?.miniquantity}`, {
                 position: "top-right",
@@ -64,6 +65,8 @@ const OpenModal = ({ item }) => {
                     .catch((err) => {
                         console.log(err)
                     })
+                    navi('/mycartt')
+
             })
             .catch((err) => {
                 console.log(err)

@@ -10,7 +10,7 @@ const SignUp = () => {
 
     const [show, setShow] = useState(false)
     const [error, setError] = useState("")
-    const { register, updateUser, setUser, gooleLogin } = useContext(Authcontext)
+    const { register, updateUser, setUser, gooleLogin ,setLoading } = useContext(Authcontext)
     const navi = useNavigate()
 
 
@@ -53,7 +53,8 @@ const SignUp = () => {
                             theme: "dark",
                             transition: Bounce,
                         });
-                        navi('/login')
+                        navi('/')
+                        setLoading(false)
                     })
                     .catch((er) => {
                         setError(er.message)
