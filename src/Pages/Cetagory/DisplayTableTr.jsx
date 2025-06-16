@@ -21,10 +21,10 @@ const DisplayTableTr = ({ item, index }) => {
             <td className="px-4 py-2">{item?.price} tk</td>
             <td className="px-4 py-2">{item?.miniquantity}</td>
             <td className="px-4 py-2">{item?.brand}</td>
-            <td className="px-4 py-2 text-center">
+            <td className="sm:px-4 py-2 text-start sm:text-center">
                 <Link
                     to={`/details/${item?._id}`}
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-1 rounded text-sm"
+                    className="bg-orange-500 hover:bg-orange-600 text-white py-2 sm:px-4 px-1  rounded text-sm"
                 >
                     View More
                 </Link>
