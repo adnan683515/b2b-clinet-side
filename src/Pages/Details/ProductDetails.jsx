@@ -106,7 +106,7 @@ const ProductDetails = () => {
             </div>
 
             {/* Bottom Info Section */}
-            <div className="mt-16  bg-orange-50 text-cyan-950  py-10 px-6 rounded-lg shadow-inner">
+            <div className="mt-16   text-cyan-950  py-10 px-6 rounded-lg shadow-inner">
                 <div className="max-w-4xl  mx-auto text-center space-y-6">
                     <h2 className="text-2xl text-orange-500 sm:text-3xl font-bold">
                         What You See is What You Get 🛍️
