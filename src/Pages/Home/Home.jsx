@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 import OurTeam from '../ExtraSection/OurTeam';
 import Anothersection from '../ExtraSection/Anothersection';
 
+
 const Home = () => {
 
     useEffect(() => {
@@ -56,6 +57,7 @@ const Home = () => {
 
             <Anothersection></Anothersection>
             <OurTeam></OurTeam>
+
         </div>
     );
 };
