@@ -84,12 +84,14 @@ const Navber = () => {
                 </ul>
             </div>
 
+
             {/* User Controls */}
             <div className="navbar-end gap-3 cursor-pointer">
-                {
-                    dark ? <SunMoon onClick={() => setDark(!dark)} size={35} color="#ff7b00" /> : <Moon onClick={() => setDark(!dark)} size={35} color="white" />
-                }
-
+                <div className=''>
+                    {
+                        dark ? <SunMoon onClick={() => setDark(!dark)} size={20} color="#ff7b00" /> : <Moon onClick={() => setDark(!dark)} size={20} color="white" />
+                    }
+                </div>
                 {loading ? (
                     <span className="loading loading-spinner text-white"></span>
                 ) : user ? (
@@ -115,12 +117,12 @@ const Navber = () => {
                 ) : (
                     <div className="flex gap-1 sm:gap-2 ">
                         <div>
-                            <Link to={'/login'} className="bg-orange-500 px-4 rounded-md py-2 text-white text-center hover:bg-orange-600 transition">
+                            <Link to={'/login'} className="bg-orange-500 sm:px-4 rounded-md px-2 py-2 text-white text-center hover:bg-orange-600 transition">
                                 Login
                             </Link>
                         </div>
                         <div className=''>
-                            <Link to={'/signup'} className="bg-white text-cyan-950 px-4 py-2 text-center  rounded-md hover:bg-gray-200 transition">
+                            <Link to={'/signup'} className="bg-white text-cyan-950 px-2 sm:px-4 py-2 text-center  rounded-md hover:bg-gray-200 transition">
                                 Sign Up
                             </Link>
                         </div>

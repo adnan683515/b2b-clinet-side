@@ -13,9 +13,7 @@ const Provider = ({ children }) => {
 
     const [user, setUser] = useState(null)
 
-    // useEffect(() => {
-    //     setDark(false)
-    // }, [dark])
+   
 
     const register = (email, password) => {
         setLoading(true)
@@ -39,7 +37,7 @@ const Provider = ({ children }) => {
         return (() => {
             suscribe()
         })
-    }, [])
+    },  [user])
 
     const logout = () => {
         setLoading(true)
