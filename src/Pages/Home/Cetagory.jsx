@@ -31,7 +31,7 @@ const Cetagory = () => {
 
     }, [])
 
-    console.log("data", data)
+
 
     return (
         <div className=''>
