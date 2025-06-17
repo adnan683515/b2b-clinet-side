@@ -10,7 +10,7 @@ const Cetagory = () => {
     const [data, setData] = useState([])
     const [load, setLoad] = useState(true)
     const params = useParams()
-    const { user } = useContext(Authcontext)
+    const { user ,dark } = useContext(Authcontext)
 
 
     const ceta = encodeURIComponent(params?.name)
@@ -39,15 +39,15 @@ const Cetagory = () => {
 
                 className='flex justify-center items-center py-3'>
                 <div className='text-center scroll-py-3'>
-                    <h1>Pick Your Vibe 😎: <span className='text-orange-500 text-2xl font-bold'>Table</span> or <span className='text-cyan-900 text-2xl font-bold'>Cards</span> </h1>
-                    <p className=' w-[100%] mx-auto sm:w-[80%]'>Easily switch between table and card layouts to explore the data the way you prefer. Table view is great for scanning rows quickly, while card view gives you a more visual breakdown.</p>
+                    <h1 className={` ${dark ? 'text-white':""}`}>Pick Your Vibe 😎: <span className='text-orange-500 text-2xl font-bold'>Table</span> or <span className='text-cyan-900 text-2xl font-bold'>Cards</span> </h1>
+                    <p className={` w-[100%] mx-auto sm:w-[80%] ${dark ?'text-white':""}`}>Easily switch between table and card layouts to explore the data the way you prefer. Table view is great for scanning rows quickly, while card view gives you a more visual breakdown.</p>
                 </div>
             </div>
             <div >
 
                 {load ? <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
-                </div> : data?.length ? <ShowProducts data={data} ></ShowProducts> : <div className="flex flex-col items-center justify-center text-center px-4 py-10 space-y-4">
+                </div> : data?.length ? <ShowProducts dark={dark} data={data} ></ShowProducts> : <div className="flex flex-col items-center justify-center text-center px-4 py-10 space-y-4">
                     {/* Crying Image */}
                     <img
                         src="https://cdn-icons-png.flaticon.com/512/742/742752.png"

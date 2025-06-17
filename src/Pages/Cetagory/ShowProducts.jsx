@@ -3,11 +3,11 @@ import 'react-tabs/style/react-tabs.css';
 import CardFormat from './CardFormat';
 import TableFormat from './TableFormat';
 
-export const ShowProducts = ({ data }) => (
+export const ShowProducts = ({ data,dark }) => (
 
     
     <Tabs>
-        <TabList>
+        <TabList className={` ${dark ? 'bg-black text-orange-500':'bg-white text-black'}`}>
             <Tab>Card Format</Tab>
             <Tab>Table Format</Tab>
         </TabList>
@@ -17,7 +17,7 @@ export const ShowProducts = ({ data }) => (
 
             <div className='grid grid-cols-1 gap-2 sm:grid-cols-3 md:grid-cols-5'>
                 {
-                    data?.map((item) => <CardFormat data={item} key={item?._id} ></CardFormat>)
+                    data?.map((item) => <CardFormat dark={dark} data={item} key={item?._id} ></CardFormat>)
                 }
             </div>
 
@@ -25,7 +25,7 @@ export const ShowProducts = ({ data }) => (
         <TabPanel>
             
 
-                <TableFormat data={data} ></TableFormat>
+                <TableFormat dark={dark} data={data} ></TableFormat>
 
         </TabPanel>
     </Tabs>

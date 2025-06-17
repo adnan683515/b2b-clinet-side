@@ -41,7 +41,7 @@ export const Hero = () => {
                                 We bring together suppliers and buyers from every corner of the world. Whether you're looking to scale
                             </p>
                             <a
-                                className={`inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white sm:px-3 py-2  hover:text-teal-accent-700 ${dark ? 'bg-black' : 'bg-orange-600'}`}
+                                className={`inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white sm:px-3 py-2  hover:text-teal-accent-700 ${dark ? 'bg-orange-600' : 'bg-orange-600'}`}
                             >
                                 Get Started
                                 <svg
@@ -55,7 +55,7 @@ export const Hero = () => {
                         </div>
                         <div className="sm:w-full w-[90%] mt-5 sm:max-w-xl h-[20vh] sm:h-full  xl:px-8 xl:w-5/12">
                             <motion.div whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }} className={`${dark ? 'bg-black text-white' : 'bg-cyan-950'} rounded-tl-4xl rounded-br-4xl  shadow-2xl  `}>
+                                whileTap={{ scale: 0.95 }} className={`${dark ? 'bg-cyan-950 text-white' : 'bg-cyan-950'} rounded-tl-4xl rounded-br-4xl  shadow-2xl  `}>
                                 <div className="">
                                     <img className="  w-1/2  sm:w-1/2 md:w-full " src="https://i.ibb.co/hxChX8jH/off2.png" alt="" />
                                 </div>

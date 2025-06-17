@@ -1,37 +1,12 @@
 import React from 'react';
 import DisplayTableTr from './DisplayTableTr';
 
-const TableFormat = ({ data }) => {
+const TableFormat = ({ data ,dark }) => {
 
 
     return (
-        // <div>
-        //     <div className="overflow-x-auto">
-        //         <table className="table ">
-        //             <thead>
-        //                 <tr className='bg-neutral-200  '>
-        //                     <th></th>
-        //                     <th>Title</th>
-        //                     <th>Cetagory</th>
-        //                     <th>Price</th>
-        //                     <th>Minimum quantity for buy</th>
-        //                     <th>Last Login</th>
-        //                     <th>Action</th>
-        //                 </tr>
-        //             </thead>
-        //             <tbody>
-        //                 {
-        //                     data?.map((item, index) => <DisplayTableTr index={index} key={item?._id} item={item}></DisplayTableTr>)
-        //                 }
-
-
-
-        //             </tbody>
-
-        //         </table>
-        //     </div>
-        // </div>
-        <div className="overflow-x-auto bg-white rounded-xl shadow-md p-4 border border-gray-200">
+       
+        <div className={`overflow-x-auto ${dark ? 'bg-gray-900':'bg-white'} rounded-xl shadow-md p-4 border border-gray-200`}>
             <table className="min-w-full table-auto text-sm text-left text-gray-700">
                 <thead className="text-xs uppercase bg-cyan-950 text-white">
                     <tr>
@@ -44,9 +19,9 @@ const TableFormat = ({ data }) => {
                         <th className="px-4 py-3 text-center">Action</th>
                     </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200">
+                <tbody className={`divide-y  ${dark ? 'bg-gray-950 text-white':'bg-white text-black'}`}>
                     {data?.map((item, index) => (
-                        <DisplayTableTr key={item?._id} index={index} item={item} />
+                        <DisplayTableTr dark={dark} key={item?._id} index={index} item={item} />
                     ))}
                 </tbody>
             </table>

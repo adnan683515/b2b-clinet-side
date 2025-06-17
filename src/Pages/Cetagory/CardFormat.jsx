@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa6';
 import ReactStars from "react-rating-stars-component";
 import { Link } from 'react-router';
 
-const CardFormat = ({ data }) => {
+const CardFormat = ({ data, dark }) => {
 
     const star = []
     for (let i = 0; i < data?.rating; i++) {
@@ -16,7 +16,7 @@ const CardFormat = ({ data }) => {
 
 
 
-        <div className="max-w-sm mx-auto p-4 bg-white border border-[#e0f7fa] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-[450px]">
+        <div className={`max-w-sm mx-auto p-4 ${dark ? ' bg-gray-950' : 'bg-white'} border border-[#e0f7fa] rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-[450px]`}>
             {/* Top part (Image + Info) */}
             <div>
                 {/* Image */}
@@ -29,7 +29,7 @@ const CardFormat = ({ data }) => {
                 </div>
 
                 {/* Content */}
-                <div className="mt-3 space-y-1 text-gray-800 text-[13px]">
+                <div className={`mt-3 space-y-1   text-[13px] ${dark ? 'text-white' : "text-gray-800"}`}>
                     <h2 className="font-bold text-base text-[#045d75]">
                         {data?.title.slice(0, 10)}...
                     </h2>
@@ -64,7 +64,7 @@ const CardFormat = ({ data }) => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600">
+                    <p className={`${dark ? 'text-white':'text-gray-600'}`}>
                         Description: {data?.des.slice(0, 30)}...
                     </p>
                 </div>

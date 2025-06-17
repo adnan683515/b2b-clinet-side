@@ -1,20 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const DisplayTableTr = ({ item, index }) => {
+const DisplayTableTr = ({ item, index ,dark }) => {
     return (
-        // <tr className=''>
-        //     <th>{index + 1} </th>
-        //     <td>{item?.title.slice(0, 20)}..</td>
-        //     <td>{item?.cetagory}</td>
-        //     <td> {item?.price} tk </td>
-        //     <td>{item?.miniquantity} </td>
-        //     <td>{item?.brand} </td>
-        //     <td>
-        //         <Link to={`/details/${item?._id}`} className='bg-orange-500 text-center px-2 py-2 '>view more..</Link>
-        //     </td>
-        // </tr>
-        <tr className="hover:bg-gray-100 transition-colors duration-200">
+    
+        <tr className={`hover:bg-gray-100 transition-colors duration-200`}>
             <th className="px-4 py-2 font-medium text-gray-800">{index + 1}</th>
             <td className="px-4 py-2">{item?.title.slice(0, 20)}..</td>
             <td className="px-4 py-2">{item?.cetagory}</td>
