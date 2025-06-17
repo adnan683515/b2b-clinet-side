@@ -11,7 +11,11 @@ const Update = () => {
     const [data, setData] = useState({})
 
     useEffect(() => {
-        axios.get(`https://b2b-server-side.vercel.app/details/${params?.id}`)
+        axios.get(`https://b2b-server-side.vercel.app/details/${params?.id}/${user?.email}`,{
+            headers: {
+                Authorization : `Bearar ${user?.accessToken}`
+            }
+        })
             .then((res) => {
                 setData(res?.data)
             })
@@ -29,7 +33,11 @@ const Update = () => {
         info.miniquantity = parseInt(info?.miniquantity)
     
 
-        axios.put(`https://b2b-server-side.vercel.app/products/${data?._id}`, info)
+        axios.put(`https://b2b-server-side.vercel.app/products/${data?._id}/${user?.email}`, info,{
+            headers : {
+                Authorization : `Bearar ${user?.accessToken}`
+            }
+        })
             .then((res) => {
                 if (res?.data.modifiedCount) {
                     Swal.fire({

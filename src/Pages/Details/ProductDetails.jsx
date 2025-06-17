@@ -8,7 +8,7 @@ const ProductDetails = () => {
 
     const params = useParams()
     const [details, setDetails] = useState({})
-    const { dark } = useContext(Authcontext)
+    const { dark,user } = useContext(Authcontext)
     const [load, setLoad] = useState(true)
     const star = []
 
@@ -18,7 +18,11 @@ const ProductDetails = () => {
 
 
     useEffect(() => {
-        fetch(`https://b2b-server-side.vercel.app/details/${params?.id}`)
+        fetch(`https://b2b-server-side.vercel.app/details/${params?.id}/${user?.email}`,{
+            headers : {
+                Authorization : `Bearar ${user?.accessToken}`
+            }
+        })
             .then((res) => res.json())
             .then((data) => {
                 setLoad(false)

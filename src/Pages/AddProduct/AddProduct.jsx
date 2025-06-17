@@ -43,7 +43,11 @@ const AddProduct = () => {
         }
 
 
-        axios.post('https://b2b-server-side.vercel.app/addproduct', productInfo)
+        axios.post(`https://b2b-server-side.vercel.app/addproduct?email=${user?.email}`, productInfo,{
+            headers : {
+                Authorization : `Bearar ${user?.accessToken}`
+            }
+        })
             .then((response) => {
 
                 if (response?.data?.insertedId) {

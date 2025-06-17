@@ -42,7 +42,11 @@ const OpenModal = ({ item ,dark }) => {
         const productId = _id
 
         const info = { productId, ...lastItemProperty, name: user?.displayName, total: tk, count, email: user?.email }
-        axios.post('https://b2b-server-side.vercel.app/buyproduct', info)
+        axios.post(`https://b2b-server-side.vercel.app/buyproduct/${user?.email}`, info,{
+            headers : {
+                Authorization : `Bearar ${user?.accessToken}`
+            }
+        })
             .then((result) => {
                 if (result?.data?.insertedId) {
 
