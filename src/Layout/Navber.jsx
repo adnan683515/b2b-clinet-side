@@ -86,48 +86,50 @@ const Navber = () => {
 
 
             {/* User Controls */}
-            <div className="navbar-end gap-3 cursor-pointer">
+            <div className="navbar-end gap-2 cursor-pointer">
                 <div className=''>
                     {
                         dark ? <SunMoon onClick={() => setDark(!dark)} size={20} color="#ff7b00" /> : <Moon onClick={() => setDark(!dark)} size={20} color="white" />
                     }
                 </div>
-                {loading ? (
-                    <span className="loading loading-spinner text-white"></span>
-                ) : user ? (
-                    <div className="flex items-center gap-3">
-                        {/* Cart */}
-                        <div className="relative">
-                            <ShoppingCart size={28} color="#ffffff" />
-                            <span className="absolute -top-1 -right-2 bg-orange-500 text-white text-xs px-1 rounded-full"> {cartItem}</span>
-                        </div>
+                <div>
+                    {loading ? (
+                        <span className="loading loading-spinner text-white"></span>
+                    ) : user ? (
+                        <div className="flex items-center gap-3">
+                            {/* Cart */}
+                            <div className="relative">
+                                <ShoppingCart size={28} color="#ffffff" />
+                                <span className="absolute -top-1 -right-2 bg-orange-500 text-white text-xs px-1 rounded-full"> {cartItem}</span>
+                            </div>
 
-                        {/* Avatar */}
-                        <div className="avatar">
-                            <div className="w-10 rounded-full ring ring-orange-500 ring-offset-base-100 ring-offset-2">
-                                <img src={user?.photoURL} alt="user" />
+                            {/* Avatar */}
+                            <div className="avatar">
+                                <div className="w-10 rounded-full ring ring-orange-500 ring-offset-base-100 ring-offset-2">
+                                    <img src={user?.photoURL} alt="user" />
+                                </div>
+                            </div>
+
+                            {/* Logout Button */}
+                            <button onClick={handleLogout} className="bg-white text-cyan-950 px-3 py-1 rounded-md hover:bg-gray-200 transition">
+                                Logout
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="flex gap-1 sm:gap-2 ">
+                            <div>
+                                <Link to={'/login'} className="bg-orange-500 sm:px-4 rounded-md px-2 py-2 text-white text-center hover:bg-orange-600 transition">
+                                    Login
+                                </Link>
+                            </div>
+                            <div className=''>
+                                <Link to={'/signup'} className="bg-white text-cyan-950 px-2 sm:px-4 py-2 text-center  rounded-md hover:bg-gray-200 transition">
+                                    Sign Up
+                                </Link>
                             </div>
                         </div>
-
-                        {/* Logout Button */}
-                        <button onClick={handleLogout} className="bg-white text-cyan-950 px-3 py-1 rounded-md hover:bg-gray-200 transition">
-                            Logout
-                        </button>
-                    </div>
-                ) : (
-                    <div className="flex gap-1 sm:gap-2 ">
-                        <div>
-                            <Link to={'/login'} className="bg-orange-500 sm:px-4 rounded-md px-2 py-2 text-white text-center hover:bg-orange-600 transition">
-                                Login
-                            </Link>
-                        </div>
-                        <div className=''>
-                            <Link to={'/signup'} className="bg-white text-cyan-950 px-2 sm:px-4 py-2 text-center  rounded-md hover:bg-gray-200 transition">
-                                Sign Up
-                            </Link>
-                        </div>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
         </div>
 
