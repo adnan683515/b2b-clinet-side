@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa6';
 import { Link, useParams } from 'react-router';
 import OpenModal from './OpenModal';
+import { Authcontext } from '../../Context/AuthContext';
 
 const ProductDetails = () => {
 
     const params = useParams()
     const [details, setDetails] = useState({})
-
+    const { dark } = useContext(Authcontext)
     const star = []
 
     useEffect(() => {
@@ -38,21 +39,21 @@ const ProductDetails = () => {
 
 
 
-        <div className="px-6 pt-12 bg-white text-cyan-950">
+        <div className={`px-6 pt-12 ${dark ? 'bg-black' : 'bg-white text-cyan-950'}`}>
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-10">
-                    <h1 className="text-3xl sm:text-4xl font-bold">
+                    <h1 className={`text-3xl ${dark ? 'text-white' : ''} sm:text-4xl font-bold`}>
                         Know <span className="text-orange-500">Before</span> You{" "}
-                        <span className="text-cyan-950">Buy</span>
+                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'}`}>Buy</span>
                     </h1>
-                    <p className="text-sm sm:text-base max-w-2xl mx-auto mt-4 text-gray-600">
+                    <p className={`text-sm sm:text-base max-w-2xl mx-auto mt-4 ${dark ? 'text-orange-500' : 'text-gray-600'}`}>
                         Everything you need to know before making your move. We got you covered with the specs, vibes, and details that matter.
                     </p>
                 </div>
 
                 {/* Main Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start bg-gray-50 p-6 rounded-xl shadow-lg">
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-start ${dark ? 'bg-gray-900' : 'bg-gray-50'} p-6 rounded-xl shadow-lg`}>
                     {/* Left - Details */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {[
@@ -70,7 +71,7 @@ const ProductDetails = () => {
                                 className={`flex gap-4 items-start ${item.full ? "sm:col-span-2" : ""}`}
                             >
                                 {/* SVG Icon */}
-                                <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-500">
+                                <div className={`w-10 h-10 rounded-full ${dark ? '' : 'bg-orange-100'} flex items-center justify-center text-orange-500`}>
                                     <svg
                                         className="w-6 h-6"
                                         fill="none"
@@ -84,8 +85,8 @@ const ProductDetails = () => {
 
                                 {/* Text */}
                                 <div>
-                                    <h6 className="font-semibold text-sm text-cyan-950">{item.label}</h6>
-                                    <div className="text-sm text-gray-700 mt-1">{item.value}</div> {/* <-- changed from <p> to <div> */}
+                                    <h6 className={`font-semibold text-sm ${dark ? 'text-orange-500' : 'text-cyan-950'}`}>{item.label}</h6>
+                                    <div className={`text-sm ${dark ? 'text-white':'text-gray-700'} mt-1`}>{item.value}</div> {/* <-- changed from <p> to <div> */}
                                 </div>
                             </div>
                         ))}
@@ -99,23 +100,23 @@ const ProductDetails = () => {
                             className="w-full max-w-sm h-64 object-cover rounded-xl shadow"
                         />
                         <div className="mt-6 w-full">
-                            <OpenModal item={details} />
+                            <OpenModal dark={dark} item={details} />
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Info Section */}
-            <div className="mt-16   text-cyan-950  py-10 px-6 rounded-lg shadow-inner">
+            <div className={`mt-16   ${dark ? 'text-white':'text-cyan-950'}  py-10 px-6 rounded-lg shadow-inner`}>
                 <div className="max-w-4xl  mx-auto text-center space-y-6">
                     <h2 className="text-2xl text-orange-500 sm:text-3xl font-bold">
                         What You See is What You Get 🛍️
                     </h2>
-                    <p className="text-base sm:text-lg text-gray-700">
+                    <p className={`text-base sm:text-lg ${dark ? 'text-white':'text-gray-70'}`}>
                         All product images and specs are 100% accurate. We don’t play games here. Get full details,
                         real reviews, and a buying experience that’s chill and transparent.
                     </p>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className={`text-sm sm:text-base ${dark ? 'text-white':'text-gray-600'}`}>
                         ✔ Fast delivery options
                         &nbsp; | &nbsp;
                         🔒 Safe payment gateway

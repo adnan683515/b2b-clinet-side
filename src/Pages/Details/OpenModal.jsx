@@ -5,7 +5,7 @@ import { Bounce, Slide, toast } from 'react-toastify';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const OpenModal = ({ item }) => {
+const OpenModal = ({ item ,dark }) => {
     const { user } = useContext(Authcontext);
     const [count, setCount] = useState(1);
     const navi = useNavigate()
@@ -78,23 +78,23 @@ const OpenModal = ({ item }) => {
 
         <div>
             <button
-                className="btn bg-cyan-950 text-white w-full border"
+                className={`btn bg-cyan-950 text-white w-full border`}
                 onClick={() => document.getElementById('my_modal_2').showModal()}
             >
                 Check Out
             </button>
 
             <dialog id="my_modal_2" className="modal">
-                <div className="modal-box bg-amber-50 border border-amber-200 max-w-2xl w-full">
-                    <h3 className="font-bold text-xl text-center mb-4 text-cyan-950">
+                <div className={`modal-box ${dark ? 'bg-gray-900':'bg-amber-50'} border border-amber-200 max-w-2xl w-full`}>
+                    <h3 className={`font-bold text-xl text-center mb-4 ${dark ? 'text-orange-500':'text-cyan-950'}`}>
                         CheckOut Page
                     </h3>
                     <hr className="mb-4" />
 
                     <div className="flex flex-col sm:flex-row justify-between gap-4">
                         <div className="flex-1 space-y-2">
-                            <h1 className="text-sm sm:text-base">👤 Name: {user?.displayName}</h1>
-                            <h2 className="text-sm sm:text-base">📧 Email: {user?.email}</h2>
+                            <h1 className={`text-sm sm:text-base ${dark ? 'text-white':''}`}>👤 Name: {user?.displayName}</h1>
+                            <h2 className={`text-sm sm:text-base ${dark ? 'text-white':''}`}>📧 Email: {user?.email}</h2>
 
                             {item?.mquantity < item?.miniquantity ? (
                                 <div className="inline-block px-4 py-1 text-sm font-semibold text-white bg-red-600 rounded-full shadow-md animate-pulse">
@@ -113,7 +113,7 @@ const OpenModal = ({ item }) => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row justify-between mt-6 gap-4">
-                        <div className="space-y-1 text-sm sm:text-base">
+                        <div className={`text-sm space-y-1 sm:text-base ${dark ? 'text-white':''}`}>
                             <p>📦 Product: {item?.title}</p>
                             <p>🗂 Category: {item?.cetagory}</p>
                             <p>💸 Price: {item?.price} tk</p>
@@ -121,7 +121,7 @@ const OpenModal = ({ item }) => {
                         </div>
                         <div className="flex items-center justify-center">
                             <div className="flex items-center gap-4">
-                                <p className="text-sm sm:text-base">Quantity:</p>
+                                <p className={`text-sm sm:text-base ${dark ? 'text-white':''}`}>Quantity:</p>
                                 <div className="flex gap-3 items-center text-xl font-semibold">
                                     <button
                                         onClick={clickNegtiveIcon}
@@ -129,7 +129,7 @@ const OpenModal = ({ item }) => {
                                     >
                                         -
                                     </button>
-                                    <span>{count}</span>
+                                    <span className={`${dark ? 'text-white':""}`}>{count}</span>
                                     <button
                                         onClick={clickPositiveIcon}
                                         className="bg-orange-200 text-cyan-950 px-2 rounded hover:bg-orange-300"
@@ -141,11 +141,11 @@ const OpenModal = ({ item }) => {
                         </div>
                     </div>
 
-                    <hr className="my-4" />
+                    <hr className={`my-4 ${dark ? 'text-white':''}`} />
 
                     <div className="flex justify-between text-sm sm:text-base font-medium">
-                        <p>💰 Total:</p>
-                        <p>{tk} tk</p>
+                        <p className={`text-sm sm:text-base ${dark ? 'text-white':''}`}>💰 Total:</p>
+                        <p className={`text-sm sm:text-base ${dark ? 'text-white':''}`}>{tk} tk</p>
                     </div>
 
                     <div className="flex justify-end mt-4">

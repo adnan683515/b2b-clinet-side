@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 
 const Update = () => {
 
-    const { user } = useContext(Authcontext)
+    const { user , dark } = useContext(Authcontext)
     const params = useParams()
     const [data, setData] = useState({})
 
@@ -51,8 +51,8 @@ const Update = () => {
 
     return (
 
-        <div className="bg-neutral-100 min-h-screen py-10 px-4 flex items-center justify-center">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-8 md:p-12">
+        <div className={`${dark ? 'bg-black':'bg-neutral-100'} min-h-screen py-10 px-4 flex items-center justify-center`}>
+            <div className={`${dark ? 'bg-gray-900':'bg-white'} rounded-2xl shadow-2xl w-full max-w-3xl p-8 md:p-12`}>
 
                 {/* Header Title and Description */}
                 <div className="text-center mb-10">
@@ -66,101 +66,101 @@ const Update = () => {
                 <form onSubmit={handleUpdate} className="space-y-6">
                     {/* Product Title */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Product Title</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Product Title</label>
                         <input
                             type="text"
                             name="title"
                             required
                             defaultValue={data?.title}
                             placeholder="Enter Your Product Title"
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
 
                     {/* Email */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Email Address</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Email Address</label>
                         <input
                             type="email"
                             name="email"
                             required
                             value={user?.email}
                             readOnly
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
 
                     {/* Price */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Price</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Price</label>
                         <input
                             type="number"
                             name="price"
                             required
                             defaultValue={data?.price}
                             placeholder="Your Product Price"
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
 
                     {/* Quantity */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Product Quantity</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Product Quantity</label>
                         <input
                             type="number"
                             name="mquantity"
                             required
                             defaultValue={data?.mquantity}
                             placeholder="Product Quantity"
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Minimum Quantity For buy</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Minimum Quantity For buy</label>
                         <input
                             type="text"
                             name="miniquantity"
                             required
                             defaultValue={data?.miniquantity}
                             placeholder="Product Quantity"
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
 
                     {/* Brand */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Brand Name</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Brand Name</label>
                         <input
                             type="text"
                             name="brand"
                             required
                             defaultValue={data?.brand}
                             placeholder="Brand Name"
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
 
                     {/* Image */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Product Image</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Product Image</label>
                         <input
                             type="url"
                             name="image"
                             required
                             defaultValue={data?.image}
                             placeholder="https://yourproductlink.com/image.jpg"
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         />
                     </div>
 
                     {/* Category */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Category</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Category</label>
                         <select
                             name="cetagory"
                             required
                             defaultValue={data?.cetagory}
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         >
                             <option defaultValue={data?.cetagory}>{data?.cetagory}</option>
                             <option value="Electronics & Gadgets">Electronics & Gadgets</option>
@@ -178,12 +178,12 @@ const Update = () => {
 
                     {/* Rating */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Rating</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Rating</label>
                         <select
                             name="rating"
                             required
                             defaultValue={data?.rating}
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                         >
                             <option value={data?.rating}>{data?.rating}</option>
                             <option value="1">1</option>
@@ -196,13 +196,13 @@ const Update = () => {
 
                     {/* Description */}
                     <div>
-                        <label className="block mb-2 text-sm font-semibold text-cyan-900">Product Description</label>
+                        <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500':'text-cyan-900'}`}>Product Description</label>
                         <textarea
                             name="des"
                             required
                             defaultValue={data?.des}
                             placeholder="Write a short description..."
-                            className="w-full px-4 py-2 rounded-md bg-gray-100 text-cyan-950 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                            className={`w-full px-4 py-2 rounded-md ${dark ? 'bg-black text-white':'bg-gray-100 text-cyan-950 '} focus:outline-none focus:ring-2 focus:ring-orange-500`}
                             rows="4"
                         />
                     </div>

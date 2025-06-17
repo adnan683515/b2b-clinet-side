@@ -4,7 +4,7 @@ import { Authcontext } from './../../Context/AuthContext';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-const DisyplayMyProduct = ({ item, data, setData }) => {
+const DisyplayMyProduct = ({ item, data, setData, dark }) => {
 
     const { title, image, cetagory, brand, price } = item
     const { user } = useContext(Authcontext)
@@ -36,15 +36,15 @@ const DisyplayMyProduct = ({ item, data, setData }) => {
                 })
                     .then(res => {
                         if (res?.data?.deletedCount) {
-                                const filter = data?.filter((product)=> product?._id !== id )
-                                setData(filter)
+                            const filter = data?.filter((product) => product?._id !== id)
+                            setData(filter)
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
                                 icon: "success"
                             });
                         }
-        
+
                     })
                     .catch(err => {
                         console.error('Delete error:', err);
@@ -57,7 +57,7 @@ const DisyplayMyProduct = ({ item, data, setData }) => {
 
     }
     return (
-        <div className="bg-white border-2 border-orange-200 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 w-full max-w-sm mx-auto p-5">
+        <div className={`${dark ? 'bg-gray-900' : 'bg-white'} border-2 border-orange-200 rounded-2xl shadow-md hover:shadow-lg transition-all  w-full max-w-sm mx-auto p-5 hover:scale-95 duration-1000`}>
             <img
                 src={image}
                 alt={title}
@@ -65,9 +65,9 @@ const DisyplayMyProduct = ({ item, data, setData }) => {
             />
 
             <div className="space-y-1">
-                <h2 className="text-xl font-bold text-cyan-950">{title}</h2>
-                <p className="text-sm text-gray-600">Brand: {brand}</p>
-                <p className="text-sm text-gray-600">Category: {cetagory}</p>
+                <h2 className={` font-semibold text-cyan-950 ${dark?'text-white':'text-cyan-950'}`}>{title}</h2>
+                <p className={`text-sm text-gray-600 ${dark?'text-orange-500':'text-cyan-950'}`}>Brand: {brand}</p>
+                <p className={`text-sm text-gray-600 ${dark?'text-white':'text-cyan-950'}`}>Category: {cetagory}</p>
                 <p className="text-base font-semibold text-orange-500">৳ {price}</p>
             </div>
 

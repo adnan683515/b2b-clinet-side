@@ -7,7 +7,7 @@ import { Link } from 'react-router';
 const MyCart = () => {
 
     const [data, setData] = useState([])
-    const { user } = useContext(Authcontext)
+    const { user,dark } = useContext(Authcontext)
     const [load, setLoad] = useState(true)
 
     const token = user?.accessToken
@@ -37,8 +37,8 @@ const MyCart = () => {
 
 
     return (
-        <div className='flex justify-center items-center my-10'>
-            <div className="flex flex-col bg-neutral-200   max-w-3xl p-6 space-y-4 sm:p-10    rounded-sm w-[100%]">
+        <div className='flex justify-center items-center py-10'>
+            <div className={`flex flex-col ${dark  ? 'bg-gray-900':'bg-neutral-200'}   max-w-3xl p-6 space-y-4 sm:p-10    rounded-sm w-[100%]`}>
                 <h2 className="text-xl text-orange-500 font-semibold">Your cart</h2>
                 <ul className="flex flex-col divide-y  ">
 
@@ -47,14 +47,14 @@ const MyCart = () => {
                             <span className="loading loading-spinner text-cyan-950"></span>
                         </div> : data?.length ? data?.map((item) => {
                             amount += item?.total
-                            return <DisplayMycart data={data} setData={setData} key={item?._id} item={item}></DisplayMycart>
-                        }) : <div class="h-[40vh] flex items-center justify-center  px-4">
-                            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
-                                <h2 class="text-2xl font-bold text-cyan-950 mb-4">Your Cart is Empty 🛒</h2>
-                                <p class="text-gray-600 mb-6">Looks like you haven't added anything yet.</p>
+                            return <DisplayMycart dark={dark} data={data} setData={setData} key={item?._id} item={item}></DisplayMycart>
+                        }) : <div className="h-[40vh] flex items-center justify-center  px-4">
+                            <div className={`${dark ? 'bg-black': "bg-white"} rounded-2xl shadow-lg p-8 max-w-md w-full text-center`}>
+                                <h2 className={`text-2xl font-bold ${dark ? 'text-orange-500':' text-cyan-950'} mb-4`}>Your Cart is Empty 🛒</h2>
+                                <p className={`${dark ? 'text-white':"text-gray-600"} mb-6`}>Looks like you haven't added anything yet.</p>
                                 <Link to={'/all-products'}
 
-                                    class="bg-orange-500  text-white px-6 py-2 rounded-xl hover:bg-orange-600 transition-all duration-300">
+                                    className="bg-orange-500  text-white px-6 py-2 rounded-xl hover:bg-orange-600 transition-all duration-300">
                                     Go to Shop
                                 </Link>
                             </div>
@@ -62,7 +62,7 @@ const MyCart = () => {
                     }
 
                 </ul>
-                <div className="space-y-1 text-right">
+                <div className={`space-y-1 text-right ${dark ? 'text-white':""}`}>
                     <p>Total amount:
                         <span className="font-semibold">{amount} tk</span>
                     </p>

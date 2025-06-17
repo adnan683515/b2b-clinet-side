@@ -2,14 +2,14 @@ import React, { useContext, } from 'react';
 import logo from '../assets/logo.png'
 import { Link, NavLink, useNavigate } from 'react-router';
 import { Authcontext } from './../Context/AuthContext';
-import { ShoppingCart } from 'lucide-react';
+import { Moon, ShoppingCart, SunMoon } from 'lucide-react';
 import { Bounce, toast } from 'react-toastify';
 import { CartContext } from '../Context/Cartprovider';
 
 // import axios from 'axios';
 const Navber = () => {
 
-    const { user, logout, loading } = useContext(Authcontext)
+    const { user, logout, loading, dark, setDark } = useContext(Authcontext)
     const { cartItem } = useContext(CartContext)
     const navigate = useNavigate()
 
@@ -57,7 +57,7 @@ const Navber = () => {
     </>
     return (
 
-        <div className="navbar bg-cyan-950 text-white px-4 py-2 shadow-md">
+        <div className={`navbar ${dark ? 'bg-gray-900' : 'bg-cyan-950'} text-white px-4 py-2 shadow-md`}>
             <div className="navbar-start">
                 {/* Mobile dropdown */}
                 <div className="dropdown">
@@ -85,7 +85,11 @@ const Navber = () => {
             </div>
 
             {/* User Controls */}
-            <div className="navbar-end gap-3">
+            <div className="navbar-end gap-3 cursor-pointer">
+                {
+                    dark ? <SunMoon onClick={() => setDark(!dark)} size={35} color="#ff7b00" /> : <Moon onClick={() => setDark(!dark)} size={35} color="white" />
+                }
+
                 {loading ? (
                     <span className="loading loading-spinner text-white"></span>
                 ) : user ? (

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Authcontext } from '../../Context/AuthContext';
 
 
 const OurTeam = () => {
+
+    const { dark } = useContext(Authcontext)
 
     return (
         <div>
@@ -11,21 +14,21 @@ const OurTeam = () => {
                     <p className="text-sm font-semibold tracking-widest text-center text-orange-500 uppercase mb-2">
                         Development Squad
                     </p>
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-cyan-950 leading-tight">
+                    <h1 className={`text-4xl sm:text-5xl font-extrabold text-center ${dark ? 'text-white' : 'text-cyan-950'} leading-tight`}>
                         Meet the talented crew powering this app
                     </h1>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  mt-8 gap-2">
 
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8  my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/5g1JX16r/sala.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold text-cyan-900 leading-snug">Sala Uddin</p>
-                                <p className="text-cyan-700">Django Developer</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Sala Uddin</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>Django Developer</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -91,15 +94,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/0yVjS9xg/498136569-708232391887572-3475127974437185724-n.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">Golam Faruk Adnan</p>
-                                <p> Marn-stack Developer </p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Golam Faruk Adnan</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}> MERN-STACK DEVELOPER </p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -165,15 +168,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/ymyXxc46/rimon.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">Rimon Islam</p>
-                                <p>App Developer</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Rimon Islam</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>App Developer</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -239,15 +242,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/ycJvXLYJ/halim2.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">Abdul Halim</p>
-                                <p>Web Designer</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Abdul Halim</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>Web Designer</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -313,15 +316,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/qFBKpd7H/azim.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">Azim Shariar</p>
-                                <p>Web Designer</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Azim Shariar</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>Web Designer</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -387,15 +390,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/kvDQ35q/tahim.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">Imtiaz Tahim</p>
-                                <p>Networking</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Imtiaz Tahim</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>Networking</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -461,15 +464,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/Rp49ttbQ/tahsin.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">MD R H TAHSIN</p>
-                                <p>Marn stack Developer</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>MD R H TAHSIN</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>MERN-STACK DEVELOPER</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -535,15 +538,15 @@ const OurTeam = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center bg-neutral-200 rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64">
+                        <div className={`flex  flex-col justify-center w-full max-w-xs px-8    my-12 text-center ${dark ? 'bg-gray-900' : 'bg-neutral-200'} rounded-lg shadow-lg md:w-96 lg:w-80 xl:w-64`}>
                             <img
                                 alt="Profile"
                                 src="https://i.ibb.co/Y7BFptKV/ratul.jpg"
                                 className="w-24 h-24 mx-auto -mt-12 rounded-full object-cover border-4 border-orange-400 shadow-md"
                             />
                             <div className="flex-1 my-4">
-                                <p className="text-xl font-semibold leading-snug">Tanvir Ratul</p>
-                                <p>Graphics Designer</p>
+                                <p className={`text-xl  ${dark ? 'text-white' : 'text-black'} font-semibold leading-snug`}>Tanvir Ratul</p>
+                                <p className={`${dark ? 'text-white' : 'text-black'} `}>Graphics Designer</p>
                             </div>
                             <div className="flex items-center justify-center p-3 space-x-6 border-t-2 border-neutral-300">
                                 {/** Email */}
@@ -627,7 +630,7 @@ const OurTeam = () => {
                 </div>
             </div>
 
-           
+
 
         </div>
     );

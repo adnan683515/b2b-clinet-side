@@ -1,9 +1,13 @@
-import React from 'react';
+
+import React, { useContext } from 'react';
+import { Authcontext } from './../Context/AuthContext';
 
 const Footer = () => {
+
+    const { dark } = useContext(Authcontext)
     return (
 
-        <footer className="bg-cyan-950 text-white px-6 py-10">
+        <footer className={`${dark ? 'bg-gray-900' : 'bg-cyan-950 text-white'} px-6 py-10`}>
             <div className="container mx-auto grid gap-10 sm:grid-cols-2 md:grid-cols-4">
                 {/* Company Info */}
                 <div className="space-y-4">

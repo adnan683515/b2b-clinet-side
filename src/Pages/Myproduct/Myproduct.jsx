@@ -6,7 +6,7 @@ import DisyplayMyProduct from './DisyplayMyProduct';
 const Myproduct = () => {
 
     const [data, setData] = useState([])
-    const { user } = useContext(Authcontext)
+    const { user, dark } = useContext(Authcontext)
     const [load, setLoad] = useState(true)
 
 
@@ -45,12 +45,12 @@ const Myproduct = () => {
                     <h1 className="text-3xl sm:text-4xl font-bold">
                         Your <span className="text-cyan-950">Products</span> Dashboard
                     </h1>
-                    <p className="text-sm sm:text-base text-cyan-950">
+                    <p className={`text-sm sm:text-base ${dark ? 'text-white':'text-cyan-950'}`}>
                         Manage all your listings in one place. Edit, delete, or add new products anytime.
                     </p>
 
-                    <div className="mt-6 bg-white text-cyan-950 px-6 py-4 rounded-lg border border-orange-300 shadow-sm">
-                        <h2 className="text-lg sm:text-xl font-semibold mb-1">🚀 Ready to increase your sales?</h2>
+                    <div className={`mt-6 ${dark ? 'bg-black text-orange-500' : 'bg-white text-cyan-950'} px-6 py-4 rounded-lg border border-orange-300 shadow-sm`}>
+                        <h2 className={`text-lg ${dark ? 'text-white':''} sm:text-xl font-semibold mb-1`}>🚀 Ready to increase your sales?</h2>
                         <p className="text-sm sm:text-base">
                             Add more products, keep prices attractive, and stay updated with trends to get more buyers onboard.
                         </p>
@@ -62,8 +62,8 @@ const Myproduct = () => {
             {
                 load ? <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
-                </div> : data?.length ? <div className='grid grid-cols-1 my-3 sm:grid-cols-3 md:grid-cols-4 gap-2'>
-                    {data?.map((item) => <DisyplayMyProduct data={data} setData={setData} key={item?._id} item={item}></DisyplayMyProduct>)}
+                </div> : data?.length ? <div className='grid grid-cols-1 py-3 sm:grid-cols-2 md:grid-cols-4 gap-2'>
+                    {data?.map((item) => <DisyplayMyProduct dark={dark} data={data} setData={setData} key={item?._id} item={item}></DisyplayMyProduct>)}
                 </div> : <div className='flex justify-center items-center'>
                     <div className="flex flex-col items-center justify-center text-center py-10 w-[90%] sm:w-[70%] md:w-[50%]   rounded-xl    my-6">
                         <h2 className="text-2xl sm:text-3xl font-bold text-cyan-950 mb-10">

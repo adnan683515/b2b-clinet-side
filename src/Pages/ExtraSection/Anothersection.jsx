@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from "framer-motion";
+import { Authcontext } from './../../Context/AuthContext';
 const Anothersection = () => {
+
+    const { dark } = useContext(Authcontext)
     return (
         <div>
             <div
-                // initial={{ opacity: 0, x: -100 }}
-                // whileInView={{ opacity: 1, x: 0 }}
-                // transition={{ duration: 2, ease: "easeOut" }}
-                // className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black"
+            // initial={{ opacity: 0, x: -100 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 2, ease: "easeOut" }}
+            // className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black"
             >
                 {/* Header section */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
@@ -52,10 +55,10 @@ const Anothersection = () => {
                     ].map((feature, index) => (
                         <div
                             key={index}
-                            className="bg-white p-4 shadow-sm rounded-lg hover:shadow-md transition-all duration-300"
+                            className={`${dark ? 'bg-gray-900' : 'bg-white'} p-4 shadow-sm rounded-lg hover:shadow-md transition-all duration-300`}
                         >
                             <h6 className="mb-2 text-lg font-semibold text-orange-500">{feature.title}</h6>
-                            <p className="text-sm text-cyan-950">{feature.desc}</p>
+                            <p className={` text-sm ${dark ? 'text-white' : 'text-cyan-950'} `}>{feature.desc}</p>
                         </div>
                     ))}
                 </div>

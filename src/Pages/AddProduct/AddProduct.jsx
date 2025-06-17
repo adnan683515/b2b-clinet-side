@@ -7,7 +7,7 @@ import { Authcontext } from './../../Context/AuthContext';
 
 const AddProduct = () => {
 
-    const { user } = useContext(Authcontext)
+    const { user, dark } = useContext(Authcontext)
 
     useEffect(() => {
         document.getElementById('title').innerText = 'Add Product page'
@@ -60,7 +60,7 @@ const AddProduct = () => {
             });
     }
     return (
-        <section className="    ">
+        <section className={` ${dark ? 'text-white' : ''}`}>
             <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                 <div>
                     <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl  ">Connect With <span className='text-orange-500'>Verified</span> <span className='text-cyan-900'>Wholesale</span> Suppliers</h2>
@@ -122,133 +122,53 @@ const AddProduct = () => {
                         <div className="lg:col-start-2">
                             <h3 className="text-2xl font-bold tracking-tight sm:text-3xl  ">Add <span className='text-orange-500'> & </span> Showcase <span className='text-orange-500'>Your</span> Product</h3>
                             <p className="mt-3 text-lg    ">Add, edit, and organize your product listings with ease. Whether you're uploading a single item or bulk inventory, our intuitive dashboard helps you stay in control. Tailored for wholesalers who value speed, accuracy, and flexibility.</p>
-                            {/* <form onSubmit={addProductFrom} className="flex  mt-4  flex-col p-1 rounded-sm space-y-6 md:py-0 bg-neutral-200 ">
-                                <label className="block px-2 mt-2">
-                                    <span className="mb-1"> Title of the Product.</span>
-                                    <input required name='title' type="text" placeholder="Title of the Product." className="block bg-white w-full  focus:ring   px-2 py-3         " />
-                                </label>
-                                <label className="block px-2">
-                                    <span className="mb-1">Upload Product cover image.</span>
-                                    <input required name='image' type="text" placeholder="Your Product URL" className="block bg-white w-full  focus:ring   px-2 py-3         " />
-                                </label>
-                                <div className='grid grid-cols-1 sm:grid-cols-2'>
-                                    <div>
-                                        <label className="block px-2">
-                                            <span className="mb-1">Main Quantity</span>
-                                            <input required name='mquantity' type="number" placeholder="Enter Your Product Quantity" className="block bg-white w-full  focus:ring   px-2 py-3         " />
-                                        </label>
-                                    </div>
 
-                                    <div>
-                                        <label className="block px-2">
-                                            <span className="mb-1">Minimum selling quantity </span>
-                                            <input required name='miniquantity' type="number" placeholder="Enter Your Minimum selling quantity" className="block bg-white w-full  focus:ring   px-2 py-3         " />
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className='grid grid-cols-1 sm:grid-cols-2'>
-                                    <div>
-                                        <label className="block px-2">
-                                            <span className="mb-1">Name of the Brand.</span>
-                                            <input required name='brand' type="text" placeholder="Enter Your Brand name " className="block bg-white w-full  focus:ring   px-2 py-3         " />
-                                        </label>
-                                    </div>
-
-                                    <div>
-                                        <label className="block px-2">
-                                            <span className="mb-1">Category </span>
-                                            <select name="cetagory" required defaultValue="Pick a Cetagory" className="select ">
-                                                <option disabled={true}>Pick a Cetagory</option>
-                                                <option value={"Electronics & Gadgets"} >Electronics & Gadgets</option>
-                                                <option value={'Home & Kitchen Appliances'}>Home & Kitchen Appliances</option>
-                                                <option value={"Fashion & Apparel"} >Fashion & Apparel</option>
-                                                <option value={"Industrial Machinery & Tools"} >Industrial Machinery & Tools</option>
-                                                <option value={"Health & Beauty"} >Health & Beauty</option>
-                                                <option value={"Office Supplies & Stationery"} >Office Supplies & Stationery</option>
-                                                <option value={"Mans Clothes"} >Man's clothes </option>
-                                                <option value={"Watches"} >Watches </option>
-                                                <option value={"Shoes"} >Shoes </option>
-                                                <option value={"Womens Clothes"} >Women’s Clothes </option>
-                                                <option value={"Tech Gadgets"} >Tech Gadgets</option>
-                                            </select>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className='grid grid-cols-1 sm:grid-cols-2'>
-                                    <div>
-                                        <label className="block px-2">
-                                            <span className="mb-1">Price </span>
-                                            <input required name='price' type="number" placeholder=" product price for each single quantity . " className="block bg-white w-full  focus:ring   px-2 py-3         " />
-                                        </label>
-                                    </div>
-
-                                    <div>
-                                        <label className="block px-2">
-                                            <span className="mb-1">Rating </span>
-                                            <select name='rating' required defaultValue="Pick a Rating" className="select ">
-                                                <option disabled={true}>Pick a Rating</option>
-                                                <option value="1"> 1 </option>
-                                                <option value="2" >2</option>
-                                                <option value="3" >3</option>
-                                                <option value="4" >4</option>
-                                                <option value="5" >5</option>
-                                            </select>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <label className="block px-2">
-                                    <span className="mb-1">Description Of Your Product</span>
-                                    <textarea required name='des' placeholder='Your Product Description' rows="3" className="block bg-white w-full rounded-md focus:ring           "></textarea>
-                                </label>
-                                <button type="submit" className="self-center px-8 py-3 text-lg w-full   bg-orange-500   ">Submit</button>
-                            </form> */}
-                            <form onSubmit={addProductFrom} className="flex flex-col mt-4 p-4 rounded-md space-y-6 bg-neutral-100 max-w-3xl mx-auto shadow-md">
+                            <form onSubmit={addProductFrom} className={`"flex flex-col mt-4 p-4 rounded-md space-y-6 ${dark ? 'bg-gray-900' : 'bg-neutral-100'} max-w-3xl mx-auto shadow-md`}>
                                 {/* Title */}
                                 <label className="block">
-                                    <span className="text-cyan-950 font-medium mb-1 block">Title of the Product</span>
+                                    <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Title of the Product</span>
                                     <input
                                         required
                                         name="title"
                                         type="text"
                                         placeholder="Title of the Product."
-                                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                        className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                     />
                                 </label>
 
                                 {/* Image */}
                                 <label className="block">
-                                    <span className="text-cyan-950 font-medium mb-1 block">Upload Product Cover Image</span>
+                                    <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Upload Product Cover Image</span>
                                     <input
                                         required
                                         name="image"
                                         type="text"
                                         placeholder="Your Product URL"
-                                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                        className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                     />
                                 </label>
 
                                 {/* Quantity fields */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <label className="block">
-                                        <span className="text-cyan-950 font-medium mb-1 block">Main Quantity</span>
+                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Main Quantity</span>
                                         <input
                                             required
                                             name="mquantity"
                                             type="number"
                                             placeholder="Enter Your Product Quantity"
-                                            className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                           className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                         />
                                     </label>
 
                                     <label className="block">
-                                        <span className="text-cyan-950 font-medium mb-1 block">Minimum Selling Quantity</span>
+                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Minimum Selling Quantity</span>
                                         <input
                                             required
                                             name="miniquantity"
                                             type="number"
                                             placeholder="Enter Your Minimum Selling Quantity"
-                                            className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                           className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                         />
                                     </label>
                                 </div>
@@ -256,23 +176,23 @@ const AddProduct = () => {
                                 {/* Brand & Category */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <label className="block">
-                                        <span className="text-cyan-950 font-medium mb-1 block">Brand Name</span>
+                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Brand Name</span>
                                         <input
                                             required
                                             name="brand"
                                             type="text"
                                             placeholder="Enter Your Brand Name"
-                                            className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                           className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                         />
                                     </label>
 
                                     <label className="block">
-                                        <span className="text-cyan-950 font-medium mb-1 block">Category</span>
+                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Category</span>
                                         <select
                                             name="cetagory"
                                             required
                                             defaultValue="Pick a Cetagory"
-                                            className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                           className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                         >
                                             <option disabled>Pick a Cetagory</option>
                                             <option>Electronics & Gadgets</option>
@@ -293,23 +213,23 @@ const AddProduct = () => {
                                 {/* Price & Rating */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <label className="block">
-                                        <span className="text-cyan-950 font-medium mb-1 block">Price</span>
+                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Price</span>
                                         <input
                                             required
                                             name="price"
                                             type="number"
                                             placeholder="Product price for each single quantity."
-                                            className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                           className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                         />
                                     </label>
 
                                     <label className="block">
-                                        <span className="text-cyan-950 font-medium mb-1 block">Rating</span>
+                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Rating</span>
                                         <select
                                             name="rating"
                                             required
                                             defaultValue="Pick a Rating"
-                                            className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                           className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                         >
                                             <option disabled>Pick a Rating</option>
                                             <option value="1">1</option>
@@ -323,13 +243,13 @@ const AddProduct = () => {
 
                                 {/* Description */}
                                 <label className="block">
-                                    <span className="text-cyan-950 font-medium mb-1 block">Product Description</span>
+                                    <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Product Description</span>
                                     <textarea
                                         required
                                         name="des"
                                         rows="3"
                                         placeholder="Your Product Description"
-                                        className="w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white"
+                                       className={`w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 ${dark ? 'bg-black text-white' : 'bg-white'}`}
                                     ></textarea>
                                 </label>
 

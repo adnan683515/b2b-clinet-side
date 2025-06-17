@@ -4,9 +4,9 @@ import Swal from 'sweetalert2';
 import { Authcontext } from '../../Context/AuthContext';
 import { CartContext } from '../../Context/Cartprovider';
 
-const DisplayMycart = ({ item, data, setData }) => {
+const DisplayMycart = ({ item, data, setData,dark }) => {
 
-    // const { setCartItem, cartItem } = useContext(CartContext)
+
 
     const handleDelete = (id) => {
 
@@ -55,7 +55,7 @@ const DisplayMycart = ({ item, data, setData }) => {
     }
 
     return (
-        <li className="flex flex-col py-6 sm:flex-row sm:justify-between">
+        <li className={`flex flex-col py-6 sm:flex-row sm:justify-between ${dark ? 'text-white':""}`}>
             <div className="flex w-full space-x-2 sm:space-x-4">
                 <img className="flex-shrink-0 object-cover w-20 h-20   rounded outline-none sm:w-32 sm:h-32  0" src={item?.image} />
                 <div className="flex flex-col justify-between w-full pb-4">

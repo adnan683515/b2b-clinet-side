@@ -17,18 +17,15 @@ import { Authcontext } from '../../Context/AuthContext';
 import { motion } from "framer-motion";
 
 const Cetagory = () => {
-
+    const { dark } = useContext(Authcontext)
 
 
     return (
-        <div className='bg-orange-50 mb-10 py-10'>
+        <div className={` py-10 ${dark ? 'bg-black' : 'bg-orange-50'}`}>
 
-            <h1 className='text-3xl text-center pb-2'>Our Products Cetagory</h1>
 
             <div
-                // initial={{ opacity: 0, x: 100 }}
-                // whileInView={{ opacity: 1, x: 0 }}
-                // transition={{ duration: 2, ease: 'easeInOut' }}
+
                 className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-[95%] sm:w-[90%] mx-auto py-6'
             >
                 {[
@@ -46,10 +43,10 @@ const Cetagory = () => {
                     <Link
                         key={index}
                         to={`/cetagory/${encodeURIComponent(item.name)}`}
-                        className="relative p-4 bg-white shadow-md rounded-lg flex flex-col items-center justify-center text-center space-y-2 hover:shadow-lg transition duration-300"
+                        className={`relative p-4 ${dark ? 'bg-gray-900 ' : 'bg-white'} shadow-md rounded-lg flex flex-col items-center justify-center text-center space-y-2 hover:shadow-lg transition duration-300`}
                     >
                         <Lottie animationData={item.animation} style={{ width: 80, height: 80 }} />
-                        <h1 className="text-sm font-semibold text-cyan-950">{item.name}</h1>
+                        <h1 className={`text-sm font-semibold ${dark ? 'text-white' : 'text-cyan-950'}`}>{item.name}</h1>
                     </Link>
                 ))}
             </div>

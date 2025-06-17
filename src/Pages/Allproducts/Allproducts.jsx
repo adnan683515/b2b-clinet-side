@@ -10,7 +10,7 @@ const Allproducts = () => {
     const [data, setData] = useState([])
     const [show, setShow] = useState(false)
     const [format, setFormat] = useState(false)
-    const { user } = useContext(Authcontext)
+    const { user ,dark} = useContext(Authcontext)
     const [load, setLoad] = useState(true)
 
     useEffect(() => {
@@ -51,14 +51,14 @@ const Allproducts = () => {
     }
 
     return (
-        <div>
+        <div className='-mb-3'>
 
 
             <div className='flex justify-center items-center mb-3'>
                 <div className='text-center space-y-2'>
                     <h1 className='text-orange-600 text-2xl font-bold'>Welcome to our full collection!</h1>
                     <div className='flex justify-center items-center'>
-                        <p className='md:w-[50%] sm:w-[90%] w-[100%]'>Here you’ll find everything we offer — from bestsellers to the latest drops. Take your time, explore the variety, and discover something that fits your vibe.
+                        <p className={`md:w-[50%] ${dark ? 'text-white':''} sm:w-[90%] w-[100%]`}>Here you’ll find everything we offer — from bestsellers to the latest drops. Take your time, explore the variety, and discover something that fits your vibe.
 
                             Whether you're shopping for yourself or someone else, our products are crafted with quality, style, and purpose in mind. Happy browsing!</p>
                     </div>
@@ -69,7 +69,7 @@ const Allproducts = () => {
             <div className='m-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4'>
                 {/* Select Option Section */}
                 <div className='space-y-2'>
-                    <h1 className="text-cyan-950 font-semibold">You Can Choose Any Options: </h1>
+                    <h1 className={`${dark ? 'text-orange-500': ''} font-semibold`}>You Can Choose Any Options: </h1>
                     <select
                         onChange={() => setFormat(!format)}
                         defaultValue="Card Format"
@@ -98,7 +98,7 @@ const Allproducts = () => {
                             <span className="loading loading-spinner text-cyan-950"></span>
                         </div>
                     ) : format ? (
-                        <div className="p-4 my-3 bg-neutral-200 rounded-xl shadow-sm">
+                        <div className={`p-4 my-3 ${dark ? 'bg-black':'bg-neutral-100'} rounded-xl shadow-sm`}>
                             <h2 className="text-2xl font-bold mb-4 text-orange-500 text-center">Product Inventory</h2>
 
                             <div className="overflow-x-auto rounded-lg border border-cyan-200 shadow-lg">
@@ -114,9 +114,9 @@ const Allproducts = () => {
                                         </tr>
                                     </thead>
 
-                                    <tbody className="divide-y divide-cyan-100 bg-white">
+                                    <tbody className={`divide-y divide-cyan-100 ${dark ? 'bg-gray-900':'bg-white'}`}>
                                         {data?.map((product) => (
-                                            <tr key={product._id} className="hover:bg-cyan-50 transition duration-300">
+                                            <tr key={product._id} className={` transition duration-300 ${dark ? 'text-white':''}`}>
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <div className="avatar">
                                                         <div className="w-10 rounded-full ring-2 ring-offset-2 ring-cyan-500">
@@ -153,7 +153,7 @@ const Allproducts = () => {
                             <div className='grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2'>
                                 {
                                     data?.map((item) => (
-                                        <DisplayAllComponents key={item?._id} item={item} />
+                                        <DisplayAllComponents dark={dark} key={item?._id} item={item} />
                                     ))
                                 }
                             </div>

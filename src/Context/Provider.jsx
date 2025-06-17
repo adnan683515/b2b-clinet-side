@@ -7,10 +7,15 @@ import { Turtle } from 'lucide-react';
 const Provider = ({ children }) => {
 
     const [loading, setLoading] = useState(true)
-    
+    const [dark, setDark] = useState(false)
+
     const provider = new GoogleAuthProvider();
 
     const [user, setUser] = useState(null)
+
+    // useEffect(() => {
+    //     setDark(false)
+    // }, [dark])
 
     const register = (email, password) => {
         setLoading(true)
@@ -55,7 +60,9 @@ const Provider = ({ children }) => {
         logout,
         updateUser,
         gooleLogin,
-    
+        dark,
+        setDark
+
     }
 
 

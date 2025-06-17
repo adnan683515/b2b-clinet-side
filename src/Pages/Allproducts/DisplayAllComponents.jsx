@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const DisplayAllComponents = ({ item }) => {
+const DisplayAllComponents = ({ item,dark }) => {
     return (
 
 
-        <div className="card bg-white border-2 border-orange-300 shadow-md hover:shadow-lg transition duration-300 rounded-xl">
+        <div className={`card ${dark ? 'text-gray-900':'bg-white'} border-2 border-orange-300 shadow-md hover:shadow-lg transition duration-300 rounded-xl`}>
             <figure className="px-4 pt-4">
                 <img
                     className="h-48 w-full object-cover rounded-md"
@@ -14,9 +14,9 @@ const DisplayAllComponents = ({ item }) => {
                 />
             </figure>
             <div className="card-body space-y-2">
-                <h2 className="card-title text-lg text-cyan-950 font-semibold flex justify-between items-center">
+                <h2 className={`card-title text-lg ${dark ? 'text-white':'text-cyan-950 '} font-semibold flex justify-between items-center`}>
                     {item?.title.slice(0, 18)}..
-                    <span className="badge bg-orange-500 text-white px-3 py-1 rounded-md shadow-sm">
+                    <span className={`badge bg-orange-500 ${dark ? 'text-black':'text-white'} px-3 py-1 rounded-md shadow-sm`}>
                         {item?.price} tk
                     </span>
                 </h2>
