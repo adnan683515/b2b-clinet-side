@@ -7,10 +7,7 @@ const Anothersection = () => {
     return (
         <div>
             <div
-            // initial={{ opacity: 0, x: -100 }}
-            // whileInView={{ opacity: 1, x: 0 }}
-            // transition={{ duration: 2, ease: "easeOut" }}
-            // className="px-4 py-16 mx-auto max-w-7xl md:px-8 text-black"
+
             >
                 {/* Header section */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
@@ -26,7 +23,7 @@ const Anothersection = () => {
                 </div>
 
                 {/* Features grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div className="grid relative overflow-hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {[
                         {
                             title: "✅ Verified Suppliers Only",
@@ -53,13 +50,20 @@ const Anothersection = () => {
                             desc: "Always here to help — from product inquiries to order disputes.",
                         },
                     ].map((feature, index) => (
-                        <div
+                        <motion.div
+
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: .2, amount: 0.4, delay: index * 0.2 }}
+                            viewport={{ once: false }}
+
+
                             key={index}
                             className={`${dark ? 'bg-gray-900' : 'bg-white'} p-4 shadow-sm rounded-lg hover:shadow-md transition-all duration-300`}
                         >
                             <h6 className="mb-2 text-lg font-semibold text-orange-500">{feature.title}</h6>
                             <p className={` text-sm ${dark ? 'text-white' : 'text-cyan-950'} `}>{feature.desc}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

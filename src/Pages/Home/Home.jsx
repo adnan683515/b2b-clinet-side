@@ -7,6 +7,9 @@ import OurTeam from '../ExtraSection/OurTeam';
 import Anothersection from '../ExtraSection/Anothersection';
 import Focus from '../ExtraSection/Focus';
 import { Authcontext } from '../../Context/AuthContext';
+import Bannar from './Bannar';
+import { GirdSection } from '../ExtraSection/GirdSection';
+
 
 
 const Home = () => {
@@ -23,6 +26,10 @@ const Home = () => {
     return (
         <div>
             <Hero></Hero>
+
+            {/* <Bannar></Bannar> */}
+
+
 
             <Marquee className='my-2' direction='left" | "right"'>
 
@@ -58,7 +65,7 @@ const Home = () => {
             <Cetagory ></Cetagory>
 
 
-
+            <GirdSection></GirdSection>
             <Anothersection></Anothersection>
             <OurTeam></OurTeam>
 

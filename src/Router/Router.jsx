@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
                 Component: SignUp
             }, {
                 path: "/cetagory/:name",
-                
+
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
                 </div>,
@@ -46,6 +46,7 @@ export const router = createBrowserRouter([
                 </PrivetRouter>
             }, {
                 path: "/all-products",
+                loader: (() => fetch('https://b2b-server-side.vercel.app/allProducts')),
                 hydrateFallbackElement: <div className='flex justify-center items-center my-20'>
                     <span className="loading loading-spinner text-cyan-950"></span>
                 </div>,
