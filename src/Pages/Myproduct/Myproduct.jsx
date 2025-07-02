@@ -40,7 +40,7 @@ const Myproduct = () => {
         <div>
 
 
-            <div className=" text-orange-500 py-10 px-4 sm:px-8 lg:px-16 rounded-xl  w-full">
+            <div className=" text-[#f9943b] py-10 px-4 sm:px-8 lg:px-16 rounded-xl  w-full">
                 <div className="max-w-4xl mx-auto text-center space-y-4">
                     <h1 className="text-3xl sm:text-4xl font-bold">
                         Your <span className="text-cyan-950">Products</span> Dashboard
@@ -49,7 +49,7 @@ const Myproduct = () => {
                         Manage all your listings in one place. Edit, delete, or add new products anytime.
                     </p>
 
-                    <div className={`mt-6 ${dark ? 'bg-black text-orange-500' : 'bg-white text-cyan-950'} px-6 py-4 rounded-lg border border-orange-300 shadow-sm`}>
+                    <div className={`mt-6 ${dark ? 'bg-black text-[#f9943b]' : 'bg-white text-cyan-950'} px-6 py-4 rounded-lg border border-orange-300 shadow-sm`}>
                         <h2 className={`text-lg ${dark ? 'text-white':''} sm:text-xl font-semibold mb-1`}>🚀 Ready to increase your sales?</h2>
                         <p className="text-sm sm:text-base">
                             Add more products, keep prices attractive, and stay updated with trends to get more buyers onboard.
@@ -72,7 +72,7 @@ const Myproduct = () => {
                         <p className="text-orange-600 mb-6 sm:text-base text-sm">
                             Start showcasing your awesome products and grow your sales today. 🚀
                         </p>
-                        <Link to={'/addproduct'} className="bg-cyan-950 text-white px-6 py-3 rounded-md text-center hover:bg-cyan-900 transition-all duration-200">
+                        <Link to={'/addproduct'} className="bg-[#08566e] text-white px-6 py-3 rounded-md text-center hover:bg-cyan-900 transition-all duration-200">
                             Add Product
                         </Link>
                     </div>

@@ -14,10 +14,10 @@ const Bannar = () => {
                     <div className='space-y-6 items-center '>
                         <h2 className={`text-center sm:text-start sm:mb-6 font-sans text-xl font-bold tracking-tight ${dark ? 'text-white' : 'text-black'} sm:text-4xl sm:leading-none`}>
 
-                            Worldwide  <span className='text-orange-500'>Bulk</span>   Traders 
+                            Worldwide  <span className='text-[#f9943b]'>Bulk</span>   Traders 
                         </h2>
                         <p className={` text-center sm:text-start sm:mb-4 w-[100%] sm:w-[80%]  sm:text-base ${dark ? 'text-white' : 'text-black'}   md:text-lg`}>
-                            <span className="text-orange-500 sm:text-2xl font-bold">"Empowering Businesses, Globally"</span>
+                            <span className="text-[#f9943b] sm:text-2xl font-bold">"Empowering Businesses, Globally"</span>
                             We bring together suppliers and buyers from every corner of the world. Whether you're looking to scale
                         </p>
                         <div className='flex justify-center items-center sm:justify-start'>

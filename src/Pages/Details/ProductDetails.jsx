@@ -51,10 +51,10 @@ const ProductDetails = () => {
                 {/* Header */}
                 <div className="text-center mb-10">
                     <h1 className={`text-3xl ${dark ? 'text-white' : ''} sm:text-4xl font-bold`}>
-                        Know <span className="text-orange-500">Before</span> You{" "}
-                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'}`}>Buy</span>
+                        Know <span className="text-[#f9943b]">Before</span> You{" "}
+                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'}`}>Buy</span>
                     </h1>
-                    <p className={`text-sm sm:text-base max-w-2xl mx-auto mt-4 ${dark ? 'text-orange-500' : 'text-gray-600'}`}>
+                    <p className={`text-sm sm:text-base max-w-2xl mx-auto mt-4 ${dark ? 'text-[#f9943b]' : 'text-gray-600'}`}>
                         Everything you need to know before making your move. We got you covered with the specs, vibes, and details that matter.
                     </p>
                 </div>
@@ -81,7 +81,7 @@ const ProductDetails = () => {
                                     className={`flex gap-4 items-start ${item.full ? "sm:col-span-2" : ""}`}
                                 >
                                     {/* SVG Icon */}
-                                    <div className={`w-10 h-10 rounded-full ${dark ? '' : 'bg-orange-100'} flex items-center justify-center text-orange-500`}>
+                                    <div className={`w-10 h-10 rounded-full ${dark ? '' : 'bg-orange-100'} flex items-center justify-center text-[#f9943b]`}>
                                         <svg
                                             className="w-6 h-6"
                                             fill="none"
@@ -95,7 +95,7 @@ const ProductDetails = () => {
 
                                     {/* Text */}
                                     <div>
-                                        <h6 className={`font-semibold text-sm ${dark ? 'text-orange-500' : 'text-cyan-950'}`}>{item.label}</h6>
+                                        <h6 className={`font-semibold text-sm ${dark ? 'text-[#f9943b]' : 'text-cyan-950'}`}>{item.label}</h6>
                                         <div className={`text-sm ${dark ? 'text-white' : 'text-gray-700'} mt-1`}>{item.value}</div> {/* <-- changed from <p> to <div> */}
                                     </div>
                                 </div>
@@ -120,7 +120,7 @@ const ProductDetails = () => {
             {/* Bottom Info Section */}
             <div className={`mt-16   ${dark ? 'text-white' : 'text-cyan-950'}  py-10 px-6 rounded-lg shadow-inner`}>
                 <div className="max-w-4xl  mx-auto text-center space-y-6">
-                    <h2 className="text-2xl text-orange-500 sm:text-3xl font-bold">
+                    <h2 className="text-2xl text-[#f9943b] sm:text-3xl font-bold">
                         What You See is What You Get 🛍️
                     </h2>
                     <p className={`text-base sm:text-lg ${dark ? 'text-white' : 'text-gray-70'}`}>

@@ -59,7 +59,7 @@ const Slider = ({ onGetStartedClick }) => {
                             <p className="text-orange-200 text-sm sm:text-base md:text-lg mb-4">{slide.subtext2}</p>
                             <button
                                 onClick={onGetStartedClick}
-                                className="bg-orange-500 hover:bg-orange-600 text-white sm:px-6 px-3 sm:py-2 py-1 rounded text-base sm:text-lg transition"
+                                className="bg-[#f9943b] hover:bg-orange-600 text-white sm:px-6 px-3 sm:py-2 py-1 rounded text-base sm:text-lg transition"
                             >
                                 {slide.buttonText}
                             </button>

@@ -11,7 +11,7 @@ const OurTeam = () => {
             <div className="py-6  w-full ">
                 <div className=" flex flex-col ">
 
-                    <p className="text-sm font-semibold tracking-widest text-center text-orange-500 uppercase mb-2">
+                    <p className="text-sm font-semibold tracking-widest text-center text-[#f9943b] uppercase mb-2">
                         Development Squad
                     </p>
                     <h1 className={`text-4xl sm:text-5xl font-extrabold text-center ${dark ? 'text-white' : 'text-cyan-950'} leading-tight`}>
@@ -36,7 +36,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +200,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -215,7 +215,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +230,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -258,7 +258,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +274,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -289,7 +289,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +304,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -332,7 +332,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -348,7 +348,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -363,7 +363,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -378,7 +378,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -406,7 +406,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -422,7 +422,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -437,7 +437,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -452,7 +452,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -480,7 +480,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -496,7 +496,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -511,7 +511,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -526,7 +526,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -554,7 +554,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Email"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -570,7 +570,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="Twitter"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -585,7 +585,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="LinkedIn"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -600,7 +600,7 @@ const OurTeam = () => {
                                     <a
 
                                         title="GitHub"
-                                        className="text-cyan-700 hover:text-orange-500 transition-colors duration-300"
+                                        className="text-cyan-700 hover:text-[#f9943b] transition-colors duration-300"
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

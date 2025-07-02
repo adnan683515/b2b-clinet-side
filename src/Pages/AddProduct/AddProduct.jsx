@@ -68,7 +68,7 @@ const AddProduct = () => {
         <section className={` ${dark ? 'text-white' : ''} `}>
             <div className="container relative overflow-hidden max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                 <div>
-                    <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl  ">Connect With <span className='text-orange-500'>Verified</span> <span className='text-cyan-900'>Wholesale</span> Suppliers</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-center sm:text-5xl  ">Connect With <span className='text-[#f9943b]'>Verified</span> <span className='text-cyan-900'>Wholesale</span> Suppliers</h2>
                     <p className="max-w-3xl mx-auto mt-4 text-xl text-center    ">
                         When you need quality at scale, we connect you with verified and trusted suppliers across industries..</p>
                 </div>
@@ -86,7 +86,7 @@ const AddProduct = () => {
                         <div className="mt-12 space-y-12">
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex text-white bg-orange-500 items-center justify-center w-12 h-12 rounded-md    ">
+                                    <div className="flex text-white bg-[#f9943b] items-center justify-center w-12 h-12 rounded-md    ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
@@ -99,7 +99,7 @@ const AddProduct = () => {
                             </div>
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex  text-white bg-orange-500 items-center justify-center w-12 h-12 rounded-md    ">
+                                    <div className="flex  text-white bg-[#f9943b] items-center justify-center w-12 h-12 rounded-md    ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
@@ -112,7 +112,7 @@ const AddProduct = () => {
                             </div>
                             <div className="flex">
                                 <div className="flex-shrink-0">
-                                    <div className="flex  text-white bg-orange-500 items-center justify-center w-12 h-12 rounded-md    ">
+                                    <div className="flex  text-white bg-[#f9943b] items-center justify-center w-12 h-12 rounded-md    ">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-7 h-7">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
@@ -138,13 +138,13 @@ const AddProduct = () => {
 
                         className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
                         <div className="lg:col-start-2">
-                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl  ">Add <span className='text-orange-500'> & </span> Showcase <span className='text-orange-500'>Your</span> Product</h3>
+                            <h3 className="text-2xl font-bold tracking-tight sm:text-3xl  ">Add <span className='text-[#f9943b]'> & </span> Showcase <span className='text-[#f9943b]'>Your</span> Product</h3>
                             <p className="mt-3 text-lg    ">Add, edit, and organize your product listings with ease. Whether you're uploading a single item or bulk inventory, our intuitive dashboard helps you stay in control. Tailored for wholesalers who value speed, accuracy, and flexibility.</p>
 
                             <form onSubmit={addProductFrom} className={`"flex flex-col mt-4 p-4 rounded-md space-y-6 ${dark ? 'bg-gray-900' : 'bg-neutral-100'} max-w-3xl mx-auto shadow-md`}>
                                 {/* Title */}
                                 <label className="block">
-                                    <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Title of the Product</span>
+                                    <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Title of the Product</span>
                                     <input
                                         required
                                         name="title"
@@ -156,7 +156,7 @@ const AddProduct = () => {
 
                                 {/* Image */}
                                 <label className="block">
-                                    <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Upload Product Cover Image</span>
+                                    <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Upload Product Cover Image</span>
                                     <input
                                         required
                                         name="image"
@@ -169,7 +169,7 @@ const AddProduct = () => {
                                 {/* Quantity fields */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <label className="block">
-                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Main Quantity</span>
+                                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Main Quantity</span>
                                         <input
                                             required
                                             name="mquantity"
@@ -180,7 +180,7 @@ const AddProduct = () => {
                                     </label>
 
                                     <label className="block">
-                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Minimum Selling Quantity</span>
+                                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Minimum Selling Quantity</span>
                                         <input
                                             required
                                             name="miniquantity"
@@ -194,7 +194,7 @@ const AddProduct = () => {
                                 {/* Brand & Category */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <label className="block">
-                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Brand Name</span>
+                                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Brand Name</span>
                                         <input
                                             required
                                             name="brand"
@@ -205,7 +205,7 @@ const AddProduct = () => {
                                     </label>
 
                                     <label className="block">
-                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Category</span>
+                                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Category</span>
                                         <select
                                             name="cetagory"
                                             required
@@ -231,7 +231,7 @@ const AddProduct = () => {
                                 {/* Price & Rating */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <label className="block">
-                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Price</span>
+                                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Price</span>
                                         <input
                                             required
                                             name="price"
@@ -242,7 +242,7 @@ const AddProduct = () => {
                                     </label>
 
                                     <label className="block">
-                                        <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Rating</span>
+                                        <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Rating</span>
                                         <select
                                             name="rating"
                                             required
@@ -261,7 +261,7 @@ const AddProduct = () => {
 
                                 {/* Description */}
                                 <label className="block">
-                                    <span className={` ${dark ? 'text-orange-500' : 'text-cyan-950'} font-medium mb-1 block`}>Product Description</span>
+                                    <span className={` ${dark ? 'text-[#f9943b]' : 'text-cyan-950'} font-medium mb-1 block`}>Product Description</span>
                                     <textarea
                                         required
                                         name="des"

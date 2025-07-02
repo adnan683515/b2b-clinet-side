@@ -72,7 +72,7 @@ const CardFormat = ({ data, dark }) => {
 
             {/* Bottom Button */}
             <Link to={`/details/${data?._id}`} className="block mt-4">
-                <button className="w-full py-2 rounded-xl border border-cyan-300 text-cyan-700 font-semibold hover:bg-cyan-950 hover:text-white transition-all duration-700">
+                <button className="w-full py-2 rounded-xl border border-cyan-300 text-cyan-700 font-semibold hover:bg-[#08566e] hover:text-white transition-all duration-700">
                     View More
                 </button>
             </Link>

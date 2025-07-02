@@ -8,7 +8,7 @@ const TableFormat = ({ data ,dark }) => {
        
         <div className={`overflow-x-auto ${dark ? 'bg-gray-900':'bg-white'} rounded-xl shadow-md p-4 border border-gray-200`}>
             <table className="min-w-full table-auto text-sm text-left text-gray-700">
-                <thead className="text-xs uppercase bg-cyan-950 text-white">
+                <thead className="text-xs uppercase bg-[#08566e] text-white">
                     <tr>
                         <th className="px-4 py-3">#</th>
                         <th className="px-4 py-3">Title</th>

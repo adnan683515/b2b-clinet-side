@@ -57,8 +57,8 @@ const Navber = () => {
     </>
     return (
 
-        <div className={`navbar bg-[#08566e] fixed top-0 z-50 overflow-hidden text-white px-4 py-2 shadow-md`}>
-            <div className="navbar-start">
+        <div className={`navbar bg-[#08566e]  fixed top-0 z-50 overflow-hidden text-white px-7 py-2`}>
+            <div className="navbar-start ">
                 {/* Mobile dropdown */}
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="lg:hidden p-2">
@@ -100,7 +100,7 @@ const Navber = () => {
                             {/* Cart */}
                             <div className="relative">
                                 <ShoppingCart size={28} color="#ffffff" />
-                                <span className="absolute -top-1 -right-2 bg-orange-500 text-white text-xs px-1 rounded-full"> {cartItem}</span>
+                                <span className="absolute -top-1 -right-2 bg-[#f9943b] text-white text-xs px-1 rounded-full"> {cartItem}</span>
                             </div>
 
                             {/* Avatar */}
@@ -118,7 +118,7 @@ const Navber = () => {
                     ) : (
                         <div className="flex gap-1 sm:gap-2 ">
                             <div>
-                                <Link to={'/login'} className="bg-orange-500 sm:px-4 rounded-md px-2 py-2 text-white text-center hover:bg-orange-600 transition">
+                                <Link to={'/login'} className="bg-[#f9943b] sm:px-4 rounded-md px-2 py-2 text-white text-center hover:bg-orange-600 transition">
                                     Login
                                 </Link>
                             </div>

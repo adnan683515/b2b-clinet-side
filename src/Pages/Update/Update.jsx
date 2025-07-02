@@ -65,7 +65,7 @@ const Update = () => {
 
                 {/* Header Title and Description */}
                 <div className="text-center mb-10">
-                    <h1 className="text-3xl md:text-4xl font-extrabold text-orange-500">Update Your Product</h1>
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-[#f9943b]">Update Your Product</h1>
                     <p className="text-cyan-900 mt-2 text-sm md:text-base">
                         Make sure your product info is always fresh & accurate – update below 👇
                     </p>
@@ -77,7 +77,7 @@ const Update = () => {
                     </div> : <form onSubmit={handleUpdate} className="space-y-6">
                         {/* Product Title */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Product Title</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Product Title</label>
                             <input
                                 type="text"
                                 name="title"
@@ -90,7 +90,7 @@ const Update = () => {
 
                         {/* Email */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Email Address</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Email Address</label>
                             <input
                                 type="email"
                                 name="email"
@@ -103,7 +103,7 @@ const Update = () => {
 
                         {/* Price */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Price</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Price</label>
                             <input
                                 type="number"
                                 name="price"
@@ -116,7 +116,7 @@ const Update = () => {
 
                         {/* Quantity */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Product Quantity</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Product Quantity</label>
                             <input
                                 type="number"
                                 name="mquantity"
@@ -127,7 +127,7 @@ const Update = () => {
                             />
                         </div>
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Minimum Quantity For buy</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Minimum Quantity For buy</label>
                             <input
                                 type="text"
                                 name="miniquantity"
@@ -140,7 +140,7 @@ const Update = () => {
 
                         {/* Brand */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Brand Name</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Brand Name</label>
                             <input
                                 type="text"
                                 name="brand"
@@ -153,7 +153,7 @@ const Update = () => {
 
                         {/* Image */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Product Image</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Product Image</label>
                             <input
                                 type="url"
                                 name="image"
@@ -166,7 +166,7 @@ const Update = () => {
 
                         {/* Category */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Category</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Category</label>
                             <select
                                 name="cetagory"
                                 required
@@ -189,7 +189,7 @@ const Update = () => {
 
                         {/* Rating */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Rating</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Rating</label>
                             <select
                                 name="rating"
                                 required
@@ -207,7 +207,7 @@ const Update = () => {
 
                         {/* Description */}
                         <div>
-                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-orange-500' : 'text-cyan-900'}`}>Product Description</label>
+                            <label className={`block mb-2 text-sm font-semibold ${dark ? 'text-[#f9943b]' : 'text-cyan-900'}`}>Product Description</label>
                             <textarea
                                 name="des"
                                 required
@@ -222,7 +222,7 @@ const Update = () => {
                         <div className="text-center">
                             <button
                                 type="submit"
-                                className="bg-orange-500 text-white font-semibold px-8 py-3 rounded-md hover:bg-orange-600 transition"
+                                className="bg-[#f9943b] text-white font-semibold px-8 py-3 rounded-md hover:bg-orange-600 transition"
                             >
                                 Update Product
                             </button>

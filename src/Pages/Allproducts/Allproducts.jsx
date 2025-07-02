@@ -81,7 +81,7 @@ const Allproducts = () => {
             <div className='m-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4'>
                 {/* Select Option Section */}
                 <div className='space-y-2'>
-                    <h1 className={`${dark ? 'text-orange-500' : ''} font-semibold`}>You Can Choose Any Options: </h1>
+                    <h1 className={`${dark ? 'text-[#f9943b]' : ''} font-semibold`}>You Can Choose Any Options: </h1>
                     <select
                         onChange={() => setFormat(!format)}
                         defaultValue="Card Format"
@@ -94,8 +94,8 @@ const Allproducts = () => {
 
                 {/* Button Section */}
                 <div className='text-center'>
-                    <p className="text-orange-500 font-medium mb-2">Click to see all available products!</p>
-                    <button onClick={handleAvailableProducts} className="px-5 py-2 bg-green-500 cursor-pointer  hover:bg-orange-500 duration-1000 rounded-xl">
+                    <p className="text-[#f9943b] font-medium mb-2">Click to see all available products!</p>
+                    <button onClick={handleAvailableProducts} className="px-5 py-2 bg-green-500 cursor-pointer  hover:bg-[#f9943b] duration-1000 rounded-xl">
                         Show Available Products
                     </button>
                 </div>
@@ -111,11 +111,11 @@ const Allproducts = () => {
                         </div>
                     ) : format ? (
                         <div className={`p-4 my-3 ${dark ? 'bg-black' : 'bg-neutral-100'} rounded-xl shadow-sm`}>
-                            <h2 className="text-2xl font-bold mb-4 text-orange-500 text-center">Product Inventory</h2>
+                            <h2 className="text-2xl font-bold mb-4 text-[#f9943b] text-center">Product Inventory</h2>
 
                             <div className="overflow-x-auto rounded-lg border border-cyan-200 shadow-lg">
                                 <table className="min-w-full divide-y divide-cyan-700 text-sm text-gray-800">
-                                    <thead className="bg-cyan-950 text-white">
+                                    <thead className="bg-[#08566e] text-white">
                                         <tr>
                                             <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Image</th>
                                             <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-wide">Title</th>
@@ -139,7 +139,7 @@ const Allproducts = () => {
                                                 <td className="px-6 py-4 whitespace-nowrap font-medium">{product?.title}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap">{product?.cetagory}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap">{product?.brand}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-orange-500 font-semibold">{product?.price} Tk</td>
+                                                <td className="px-6 py-4 whitespace-nowrap text-[#f9943b] font-semibold">{product?.price} Tk</td>
                                                 <td className="px-6 py-4 whitespace-nowrap flex gap-2 justify-end">
                                                     <Link
                                                         to={`/update/${product?._id}`}
@@ -149,7 +149,7 @@ const Allproducts = () => {
                                                     </Link>
                                                     <Link
                                                         to={`/details/${product?._id}`}
-                                                        className="px-4 py-1 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition duration-300"
+                                                        className="px-4 py-1 bg-[#f9943b] text-white rounded-md hover:bg-orange-600 transition duration-300"
                                                     >
                                                         View More..
                                                     </Link>
@@ -181,7 +181,7 @@ const Allproducts = () => {
                         if (currentPage  !== 1 ) {
                             setCurrentPage(currentPage - 1)
                         }
-                    }} className='bg-cyan-950 mr-1 text-white border-orange-500 px-3 py-1'> prev </button>
+                    }} className='bg-[#08566e] mr-1 text-white border-orange-500 px-3 py-1'> prev </button>
                     {
                         numberOfPage?.map((page) => <button onClick={() => {
                             setCurrentPage((parseInt(page + 1)))
@@ -191,9 +191,9 @@ const Allproducts = () => {
                         if (currentPage > 0  && currentPage < showProductsPerpage) {
                             setCurrentPage(currentPage + 1)
                         }
-                    }} className='bg-cyan-950 text-white border-orange-500 px-3 py-1 ml-1'> Next </button>
+                    }} className='bg-[#08566e] text-white border-orange-500 px-3 py-1 ml-1'> Next </button>
 
-                    <select defaultValue={productsPerPage} className='bg-cyan-950 py-1 sm:mx-3 text-white' onChange={(e) => {
+                    <select defaultValue={productsPerPage} className='bg-[#08566e] py-1 sm:mx-3 text-white' onChange={(e) => {
                         setProductsPerpPage(parseInt(e.target.value))
                         setCurrentPage(1)
                     }}>

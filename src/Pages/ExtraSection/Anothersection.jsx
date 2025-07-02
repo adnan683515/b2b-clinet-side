@@ -11,10 +11,10 @@ const Anothersection = () => {
             >
                 {/* Header section */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
-                    <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-cyan-950 uppercase rounded-full bg-orange-500">
+                    <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-cyan-950 uppercase rounded-full bg-[#f9943b]">
                         For Business Owners
                     </p>
-                    <h2 className="text-3xl font-bold sm:text-4xl text-orange-500">
+                    <h2 className="text-3xl font-bold sm:text-4xl text-[#f9943b]">
                         Powering B2B Wholesale With Speed & Trust
                     </h2>
                     <p className="mt-4 text-base sm:text-lg text-cyan-900">
@@ -61,7 +61,7 @@ const Anothersection = () => {
                             key={index}
                             className={`${dark ? 'bg-gray-900' : 'bg-white'} p-4 shadow-sm rounded-lg hover:shadow-md transition-all duration-300`}
                         >
-                            <h6 className="mb-2 text-lg font-semibold text-orange-500">{feature.title}</h6>
+                            <h6 className="mb-2 text-lg font-semibold text-[#f9943b]">{feature.title}</h6>
                             <p className={` text-sm ${dark ? 'text-white' : 'text-cyan-950'} `}>{feature.desc}</p>
                         </motion.div>
                     ))}

@@ -27,7 +27,7 @@ export const GirdSection = () => {
                     <CardTitle>
                         {laptops}
                     </CardTitle>
-                    <div className="absolute bottom-0 left-4 right-4 top-26 sm:top-70 md:top-40 translate-y-8 rounded-t-2xl bg-orange-500  p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
+                    <div className="absolute bottom-0 left-4 right-4 top-26 sm:top-70 md:top-40 translate-y-8 rounded-t-2xl bg-[#f9943b]  p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
                         <span className="block text-center font-semibold text-indigo-50">
                             FEATURE DEMO HERE
                         </span>
@@ -65,7 +65,7 @@ export const GirdSection = () => {
                         {shop}
                     </CardTitle>
 
-                    <div className="absolute bottom-0 left-4 right-4 top-25 sm:top-50 translate-y-8 rounded-t-2xl bg-cyan-950  p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
+                    <div className="absolute bottom-0 left-4 right-4 top-25 sm:top-50 translate-y-8 rounded-t-2xl bg-[#08566e]  p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
                         <span className="block text-center font-semibold text-emerald-50">
                             🛍️ DeshiBazar Wholesale – One Stop for All Your Product Needs
                         </span>

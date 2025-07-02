@@ -106,13 +106,13 @@ const SignUp = () => {
 
                 {/* Sign Up Form */}
                 <div className={`w-full sm:w-1/2 md:w-1/3 ${dark ? 'bg-gray-950' : 'bg-neutral-100 '} rounded-lg p-6 space-y-2`}>
-                    <h1 className={`text-3xl font-bold text-center ${dark ? 'text-orange-500':'text-cyan-950'} `}>Sign Up</h1>
+                    <h1 className={`text-3xl font-bold text-center ${dark ? 'text-[#f9943b]':'text-cyan-950'} `}>Sign Up</h1>
 
                     <form onSubmit={handleRegister} className="space-y-2">
                         {error && <p className="text-red-600 text-sm text-center">{error}</p>}
 
                         <div className="space-y-1">
-                            <label htmlFor="name" className={`block text-sm font-medium ${dark ? 'text-orange-500' : ''}`}>Username</label>
+                            <label htmlFor="name" className={`block text-sm font-medium ${dark ? 'text-[#f9943b]' : ''}`}>Username</label>
                             <input
                                 required
                                 type="text"
@@ -124,7 +124,7 @@ const SignUp = () => {
                         </div>
 
                         <div className="space-y-1">
-                            <label htmlFor="email" className={`block text-sm font-medium ${dark ? 'text-orange-500' : ''}`}>Email</label>
+                            <label htmlFor="email" className={`block text-sm font-medium ${dark ? 'text-[#f9943b]' : ''}`}>Email</label>
                             <input
                                 required
                                 type="email"
@@ -136,7 +136,7 @@ const SignUp = () => {
                         </div>
 
                         <div className="space-y-1">
-                            <label htmlFor="pic" className={`block text-sm font-medium ${dark ? 'text-orange-500' : ''}`}>Photo URL</label>
+                            <label htmlFor="pic" className={`block text-sm font-medium ${dark ? 'text-[#f9943b]' : ''}`}>Photo URL</label>
                             <input
                                 required
                                 type="text"
@@ -148,7 +148,7 @@ const SignUp = () => {
                         </div>
 
                         <div className="space-y-1">
-                            <label htmlFor="password" className={`block text-sm font-medium ${dark ? 'text-orange-500' : ''}`}>Password</label>
+                            <label htmlFor="password" className={`block text-sm font-medium ${dark ? 'text-[#f9943b]' : ''}`}>Password</label>
                             <input
                                 required
                                 type={show ? 'text' : 'password'}
@@ -157,16 +157,16 @@ const SignUp = () => {
                                 placeholder="Enter your password"
                                 className={`w-full px-4 py-2 ${dark ? 'bg-black text-white' : 'bg-white'} border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400`}
                             />
-                            <div className={`flex justify-between items-center pt-1 text-xs ${dark ? 'text-orange-500' : ''}`}>
+                            <div className={`flex justify-between items-center pt-1 text-xs ${dark ? 'text-[#f9943b]' : ''}`}>
                                 <label className="flex items-center">
                                     <input type="checkbox" onClick={() => setShow(!show)} className="mr-1" />
                                     Show Password
                                 </label>
-                                <a href="#" className="text-orange-500 hover:underline">Forgot Password?</a>
+                                <a href="#" className="text-[#f9943b] hover:underline">Forgot Password?</a>
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition">
+                        <button type="submit" className="w-full py-2 bg-[#f9943b] text-white font-semibold rounded-md hover:bg-orange-600 transition">
                             Sign Up
                         </button>
                     </form>
@@ -188,7 +188,7 @@ const SignUp = () => {
 
                     <p className="text-sm text-center text-gray-700">
                         Already have an account?{" "}
-                        <Link to="/login" className="text-orange-500 font-medium hover:underline">Login</Link>
+                        <Link to="/login" className="text-[#f9943b] font-medium hover:underline">Login</Link>
                     </p>
                 </div>
             </div>

@@ -66,21 +66,21 @@ const DisyplayMyProduct = ({ item, data, setData, dark }) => {
 
             <div className="space-y-1">
                 <h2 className={` font-semibold text-cyan-950 ${dark?'text-white':'text-cyan-950'}`}>{title}</h2>
-                <p className={`text-sm text-gray-600 ${dark?'text-orange-500':'text-cyan-950'}`}>Brand: {brand}</p>
+                <p className={`text-sm text-gray-600 ${dark?'text-[#f9943b]':'text-cyan-950'}`}>Brand: {brand}</p>
                 <p className={`text-sm text-gray-600 ${dark?'text-white':'text-cyan-950'}`}>Category: {cetagory}</p>
-                <p className="text-base font-semibold text-orange-500">৳ {price}</p>
+                <p className="text-base font-semibold text-[#f9943b]">৳ {price}</p>
             </div>
 
             <div className="flex justify-between gap-3 mt-4">
                 <Link to={`/details/${item?._id}`}
 
-                    className="flex-1 bg-cyan-950 text-center text-white py-2 rounded-md text-sm hover:bg-cyan-900 transition"
+                    className="flex-1 bg-[#08566e] text-center text-white py-2 rounded-md text-sm hover:bg-cyan-900 transition"
                 >
                     View More
                 </Link>
                 <button
                     onClick={handleMyProductDelete}
-                    className="flex-1 bg-orange-500 text-white py-2 rounded-md text-sm hover:bg-orange-600 transition"
+                    className="flex-1 bg-[#f9943b] text-white py-2 rounded-md text-sm hover:bg-orange-600 transition"
                 >
                     Delete
                 </button>

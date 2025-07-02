@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero = () => {
     return (
-        <div className="relative h-[50vh] mt-19 sm:h-[80vh] w-full overflow-hidden">
+        <div className="relative h-[50vh] sm:mt-20 sm:h-[80vh] w-full overflow-hidden">
             {/* Background image */}
             <img
                 src="https://i.ibb.co/YF708cTv/Beige-and-Brown-Minimalist-New-Style-Collection-Banner-1.png"

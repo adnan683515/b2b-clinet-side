@@ -7,7 +7,7 @@ export const ShowProducts = ({ data,dark }) => (
 
     
     <Tabs>
-        <TabList className={` ${dark ? 'bg-black text-orange-500':'bg-white text-black'}`}>
+        <TabList className={` ${dark ? 'bg-black text-[#f9943b]':'bg-white text-black'}`}>
             <Tab>Card Format</Tab>
             <Tab>Table Format</Tab>
         </TabList>

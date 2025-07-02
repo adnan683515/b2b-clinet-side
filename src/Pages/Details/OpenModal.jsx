@@ -82,7 +82,7 @@ const OpenModal = ({ item ,dark }) => {
 
         <div>
             <button
-                className={`btn bg-cyan-950 text-white w-full border`}
+                className={`btn bg-[#08566e] text-white w-full border`}
                 onClick={() => document.getElementById('my_modal_2').showModal()}
             >
                 Check Out
@@ -90,7 +90,7 @@ const OpenModal = ({ item ,dark }) => {
 
             <dialog id="my_modal_2" className="modal">
                 <div className={`modal-box ${dark ? 'bg-gray-900':'bg-amber-50'} border border-amber-200 max-w-2xl w-full`}>
-                    <h3 className={`font-bold text-xl text-center mb-4 ${dark ? 'text-orange-500':'text-cyan-950'}`}>
+                    <h3 className={`font-bold text-xl text-center mb-4 ${dark ? 'text-[#f9943b]':'text-cyan-950'}`}>
                         CheckOut Page
                     </h3>
                     <hr className="mb-4" />
@@ -158,7 +158,7 @@ const OpenModal = ({ item ,dark }) => {
                         {count < item?.mquantity && item?.mquantity >= item?.miniquantity &&
                             <button
                                 onClick={handleBuy}
-                                className="bg-cyan-950 text-white px-6 py-2 rounded hover:bg-cyan-900"
+                                className="bg-[#08566e] text-white px-6 py-2 rounded hover:bg-cyan-900"
                             >
                                 Buy
                             </button>

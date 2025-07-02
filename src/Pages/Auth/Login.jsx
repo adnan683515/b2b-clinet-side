@@ -89,7 +89,7 @@ const Login = () => {
                         {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
                         <div className="space-y-1">
-                            <label htmlFor="email" className={`block text-sm font-medium ${dark ? 'text-orange-500' : ''}`}>Email</label>
+                            <label htmlFor="email" className={`block text-sm font-medium ${dark ? 'text-[#f9943b]' : ''}`}>Email</label>
                             <input
                                 required
                                 type="email"
@@ -101,7 +101,7 @@ const Login = () => {
                         </div>
 
                         <div className="space-y-1">
-                            <label htmlFor="password" className={`block text-sm font-medium ${dark ? 'text-orange-500' : ''}`}>Password</label>
+                            <label htmlFor="password" className={`block text-sm font-medium ${dark ? 'text-[#f9943b]' : ''}`}>Password</label>
                             <input
                                 required
                                 type={show ? 'text' : 'password'}
@@ -110,16 +110,16 @@ const Login = () => {
                                 placeholder="Enter password"
                                 className={`w-full px-4 py-2 ${dark ? 'bg-black text-white' : 'bg-white'} border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400`}
                             />
-                            <div className={`flex justify-between items-center pt-1 text-xs ${dark ? 'text-orange-500':''}`}>
+                            <div className={`flex justify-between items-center pt-1 text-xs ${dark ? 'text-[#f9943b]':''}`}>
                                 <label className="flex items-center" >
                                     <input type="checkbox" onClick={() => setShow(!show)} className="mr-1 " />
                                     Show Password
                                 </label>
-                                <a href="#" className="text-orange-500 hover:underline">Forgot Password?</a>
+                                <a href="#" className="text-[#f9943b] hover:underline">Forgot Password?</a>
                             </div>
                         </div>
 
-                        <button type="submit" className="w-full py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-orange-600 transition">
+                        <button type="submit" className="w-full py-2 bg-[#f9943b] text-white font-semibold rounded-md hover:bg-orange-600 transition">
                             Sign In
                         </button>
                     </form>
@@ -141,7 +141,7 @@ const Login = () => {
 
                     <p className="text-sm text-center text-gray-700">
                         Don’t have an account?{" "}
-                        <Link to="/signup" className="text-orange-500 font-medium hover:underline">Sign up</Link>
+                        <Link to="/signup" className="text-[#f9943b] font-medium hover:underline">Sign up</Link>
                     </p>
                 </div>
             </div>

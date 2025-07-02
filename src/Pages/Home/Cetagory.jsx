@@ -39,7 +39,7 @@ const Cetagory = () => {
 
                 className='flex justify-center items-center py-3'>
                 <div className='text-center scroll-py-3'>
-                    <h1 className={` ${dark ? 'text-white':""}`}>Pick Your Vibe 😎: <span className='text-orange-500 text-2xl font-bold'>Table</span> or <span className='text-cyan-900 text-2xl font-bold'>Cards</span> </h1>
+                    <h1 className={` ${dark ? 'text-white':""}`}>Pick Your Vibe 😎: <span className='text-[#f9943b] text-2xl font-bold'>Table</span> or <span className='text-cyan-900 text-2xl font-bold'>Cards</span> </h1>
                     <p className={` w-[100%] mx-auto sm:w-[80%] ${dark ?'text-white':""}`}>Easily switch between table and card layouts to explore the data the way you prefer. Table view is great for scanning rows quickly, while card view gives you a more visual breakdown.</p>
                 </div>
             </div>
@@ -57,7 +57,7 @@ const Cetagory = () => {
 
                     {/* Title */}
                     <h2 className="text-2xl sm:text-3xl font-bold text-cyan-950">
-                        Oops! <span className="text-orange-500">No Products Found</span>
+                        Oops! <span className="text-[#f9943b]">No Products Found</span>
                     </h2>
 
                     {/* Description */}

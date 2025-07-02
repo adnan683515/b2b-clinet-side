@@ -108,8 +108,8 @@ export const router = createBrowserRouter([
         ]
     }, {
         path: "/*",
-        element: <div className="min-h-screen flex flex-col items-center justify-center bg-cyan-950 text-white px-4 text-center">
-            <h1 className="text-7xl font-extrabold mb-4 text-orange-500">404</h1>
+        element: <div className="min-h-screen flex flex-col items-center justify-center bg-[#08566e] text-white px-4 text-center">
+            <h1 className="text-7xl font-extrabold mb-4 text-[#f9943b]">404</h1>
             <h2 className="text-3xl font-semibold mb-2">Page Not Found</h2>
             <p className="text-lg mb-6 max-w-md">
                 Oops! The page you're looking for doesn't exist or has been moved.
@@ -117,7 +117,7 @@ export const router = createBrowserRouter([
             <Link
                 to={'/'}
 
-                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded transition"
+                className="bg-[#f9943b] hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded transition"
             >
                 Go to Home
             </Link>

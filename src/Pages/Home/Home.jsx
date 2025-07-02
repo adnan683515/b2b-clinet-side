@@ -36,7 +36,7 @@ const Home = () => {
 
                 <div className={`text-center px-4 py-6 ${dark ? 'text-white' : 'bg-neutral-100'} rounded-md max-w-md mx-auto shadow-md`}>
                     <h1 className={`text-4xl font-extrabold ${dark ? 'text-white' : ""} mb-2`}>
-                        50% <span className="text-orange-500">Discount</span> Choltese!
+                        50% <span className="text-[#f9943b]">Discount</span> Choltese!
                     </h1>
                     <p className={`text-lg ${dark ? 'text-white' : ''}text-cyan-900 font-medium`}>
                         Fatafati offer, miss korle hobe na! 🚀
@@ -53,7 +53,7 @@ const Home = () => {
                 className={`${dark ? 'bg-black text-white' : 'bg-orange-50'}  py-10 px-4 sm:px-6 md:px-10 lg:px-16`}
             >
                 <div className="max-w-5xl mx-auto text-center space-y-6">
-                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-orange-500`}>
+                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#f9943b]`}>
                         Category Based Products
                     </h2>
                     <p className={`${dark ? 'text-white' : 'text-gray-700'} text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto`}>
