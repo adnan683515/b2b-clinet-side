@@ -11,7 +11,7 @@ const ShowAllCetagory = () => {
     
     return (
         <div>
-            <div className="text-center space-y-2 px-4 py-6">
+            <div className="text-center  space-y-2 px-4 py-6">
                 {/* Upper Title Animation */}
                 <motion.h1
                     initial={{ opacity: 0, y: -30 }}

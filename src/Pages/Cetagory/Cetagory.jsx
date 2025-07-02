@@ -21,12 +21,12 @@ const Cetagory = () => {
 
 
     return (
-        <div className={` py-10 ${dark ? 'bg-black' : 'bg-orange-50'}`}>
+        <div className={`  py-10 ${dark ? 'bg-black' : 'bg-orange-50'}`}>
 
 
             <div
 
-                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-[95%] sm:w-[90%] mx-auto py-6'
+                className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 w-[95%] sm:w-[96%] mx-auto py-6'
             >
                 {[
                     { name: 'Office Supplies & Stationery', animation: animation_1 },

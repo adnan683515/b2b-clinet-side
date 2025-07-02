@@ -57,7 +57,7 @@ const Navber = () => {
     </>
     return (
 
-        <div className={`navbar ${dark ? 'bg-gray-900' : 'bg-cyan-950'} text-white px-4 py-2 shadow-md`}>
+        <div className={`navbar bg-[#08566e] fixed top-0 z-50 overflow-hidden text-white px-4 py-2 shadow-md`}>
             <div className="navbar-start">
                 {/* Mobile dropdown */}
                 <div className="dropdown">

@@ -9,6 +9,7 @@ import Focus from '../ExtraSection/Focus';
 import { Authcontext } from '../../Context/AuthContext';
 import Bannar from './Bannar';
 import { GirdSection } from '../ExtraSection/GirdSection';
+import Slider from '../../Slider/Slider';
 
 
 
@@ -26,7 +27,7 @@ const Home = () => {
     return (
         <div>
             <Hero></Hero>
-
+                {/* <Slider></Slider> */}
             {/* <Bannar></Bannar> */}
 
 
@@ -65,7 +66,7 @@ const Home = () => {
             <Cetagory ></Cetagory>
 
 
-            <GirdSection></GirdSection>
+           
             <Anothersection></Anothersection>
             <OurTeam></OurTeam>
 

@@ -5,7 +5,7 @@ const Anothersection = () => {
 
     const { dark } = useContext(Authcontext)
     return (
-        <div>
+        <div className=' w-[96%] mx-auto'>
             <div
 
             >

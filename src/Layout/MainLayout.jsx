@@ -15,7 +15,7 @@ const MainLayout = () => {
             <Navber></Navber>
 
 
-            <div className={`min-h-[calc(100vh-33vh)] ${dark ? 'bg-black': 'bg-white'}`}>
+            <div className={`min-h-[calc(100vh-33vh)]  mt-16 sm:mt-20  ${dark ? 'bg-black': 'bg-white'}`}>
                 {
                     load?.state === 'loading' ? <div className='flex justify-center items-center my-20'>
                         <span className="loading loading-spinner text-cyan-950"></span>
