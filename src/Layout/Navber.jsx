@@ -57,7 +57,7 @@ const Navber = () => {
     </>
     return (
 
-        <div className={`navbar bg-[#08566e]  fixed top-0 z-50 overflow-hidden text-white px-7 py-2`}>
+        <div className={`navbar bg-[#08566e]   fixed top-0 z-50 overflow-hidden text-white sm:px-7 py-2`}>
             <div className="navbar-start ">
                 {/* Mobile dropdown */}
                 <div className="dropdown">
@@ -86,7 +86,7 @@ const Navber = () => {
 
 
             {/* User Controls */}
-            <div className="navbar-end gap-2 cursor-pointer">
+            <div className="navbar-end  gap-2 cursor-pointer">
                 <div className=''>
                     {
                         dark ? <SunMoon onClick={() => setDark(!dark)} size={20} color="#ff7b00" /> : <Moon onClick={() => setDark(!dark)} size={20} color="white" />

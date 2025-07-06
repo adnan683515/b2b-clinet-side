@@ -26,8 +26,8 @@ const Home = () => {
 
     return (
         <div>
-            <Hero></Hero>
-                {/* <Slider></Slider> */}
+            {/* <Hero></Hero> */}
+                <Slider></Slider>
             {/* <Bannar></Bannar> */}
 
 
