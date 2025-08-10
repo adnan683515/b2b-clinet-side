@@ -25,7 +25,7 @@ A modern B2B wholesale platform designed to connect bulk buyers and suppliers in
 
 ---
 
-### 📦 NPM Packages Used
+
 
 - **react-router-dom** – Routing between pages  
 - **axios** – API requests  
